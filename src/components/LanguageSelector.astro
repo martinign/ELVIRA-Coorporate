@@ -1,0 +1,224 @@
+---
+import 'flag-icons/css/flag-icons.min.css';
+
+const languages = [
+  { code: 'en', name: 'EN', fullName: 'English', flag: 'gb' },
+  { code: 'es', name: 'ES', fullName: 'Español', flag: 'es' },
+  { code: 'pt', name: 'PT', fullName: 'Português', flag: 'br' },
+  { code: 'it', name: 'IT', fullName: 'Italiano', flag: 'it' },
+  { code: 'fr', name: 'FR', fullName: 'Français', flag: 'fr' },
+  { code: 'de', name: 'DE', fullName: 'Deutsch', flag: 'de' }
+];
+
+// Default to English
+const currentPath = Astro.url.pathname;
+---
+
+<div class="relative inline-block text-left language-selector">
+  <div>
+    <button type="button" class="inline-flex items-center justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500" id="language-menu-button" aria-expanded="false" aria-haspopup="true">
+      <span id="current-language-flag" class="fi me-2"></span>
+      <span id="current-language-name"></span>
+      <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+      </svg>
+    </button>
+  </div>
+
+  <div class="hidden origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50 language-dropdown" role="menu" aria-orientation="vertical" aria-labelledby="language-menu-button" tabindex="-1" id="language-menu">
+    <div class="py-1" role="none">
+      {languages.map(language => (
+        <button 
+          data-lang-code={language.code} 
+          data-lang-flag={language.flag}
+          data-lang-name={language.name}
+          class="language-option flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 w-full text-left" 
+          role="menuitem" 
+          tabindex="-1"
+          title={language.fullName}
+        >
+          <span class={`fi fi-${language.flag} mr-2`}></span>
+          <span>{language.name}</span>
+        </button>
+      ))}
+    </div>
+  </div>
+</div>
+
+<script>
+  import { getLanguage, setLanguage } from '../utils/i18n.js';
+  
+  // Initialize language selector with current language
+  function updateLanguageDisplay() {
+    const currentLang = getLanguage();
+    const languages = [
+      { code: 'en', name: 'EN', flag: 'gb' },
+      { code: 'es', name: 'ES', flag: 'es' },
+      { code: 'pt', name: 'PT', flag: 'br' },
+      { code: 'it', name: 'IT', flag: 'it' },
+      { code: 'fr', name: 'FR', flag: 'fr' },
+      { code: 'de', name: 'DE', flag: 'de' }
+    ];
+    
+    const langInfo = languages.find(l => l.code === currentLang) || languages[0];
+    
+    const flagElements = document.querySelectorAll('#current-language-flag');
+    const nameElements = document.querySelectorAll('#current-language-name');
+    
+    flagElements.forEach(el => {
+      if (el) {
+        el.className = `fi fi-${langInfo.flag} mr-2`;
+      }
+    });
+    
+    nameElements.forEach(el => {
+      if (el) {
+        el.textContent = langInfo.name;
+      }
+    });
+  }
+  
+  // Initialize all language selector dropdowns
+  function initializeLanguageSelectors() {
+    const buttons = document.querySelectorAll('#language-menu-button');
+    const menus = document.querySelectorAll('#language-menu');
+    
+    updateLanguageDisplay();
+
+    buttons.forEach((button, index) => {
+      const menu = menus[index];
+      
+      if (button && menu) {
+        // Toggle menu on button click
+        button.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          const isHidden = menu.classList.contains('hidden');
+          
+          // Close all menus first
+          menus.forEach(m => {
+            if (m) m.classList.add('hidden');
+          });
+          
+          // Then toggle the current menu
+          if (isHidden) {
+            menu.classList.remove('hidden');
+            button.setAttribute('aria-expanded', 'true');
+          } else {
+            menu.classList.add('hidden');
+            button.setAttribute('aria-expanded', 'false');
+          }
+        });
+        
+        // Also handle touchstart for mobile
+        button.addEventListener('touchstart', (e) => {
+          e.stopPropagation();
+        }, { passive: true });
+      }
+    });
+
+    // Close all menus when clicking or touching outside
+    document.addEventListener('click', closeMenusIfOutside);
+    document.addEventListener('touchstart', closeMenusIfOutside, { passive: true });
+    
+    function closeMenusIfOutside(event) {
+      const target = event.target;
+      let clickedInsideMenu = false;
+      
+      buttons.forEach(button => {
+        if (button && button.contains(target)) {
+          clickedInsideMenu = true;
+        }
+      });
+      
+      menus.forEach(menu => {
+        if (menu && menu.contains(target)) {
+          clickedInsideMenu = true;
+        }
+      });
+      
+      if (!clickedInsideMenu) {
+        menus.forEach(menu => {
+          if (menu) {
+            menu.classList.add('hidden');
+          }
+        });
+        
+        buttons.forEach(button => {
+          if (button) {
+            button.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+    }
+    
+    // Add event listeners for language selection
+    const languageOptions = document.querySelectorAll('.language-option');
+    languageOptions.forEach(option => {
+      option.addEventListener('click', handleLanguageSelection);
+      option.addEventListener('touchend', handleLanguageSelection, { passive: true });
+      
+      function handleLanguageSelection(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const langCode = option.dataset.langCode;
+        if (langCode) {
+          setLanguage(langCode);
+        }
+        
+        // Hide all menus after selection
+        menus.forEach(menu => {
+          if (menu) {
+            menu.classList.add('hidden');
+          }
+        });
+        
+        buttons.forEach(button => {
+          if (button) {
+            button.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+    });
+  }
+  
+  // Initialize on load and when hash changes
+  document.addEventListener('DOMContentLoaded', initializeLanguageSelectors);
+  window.addEventListener('hashchange', updateLanguageDisplay);
+  
+  // Handle mobile-specific issues by reinitializing when mobile menu toggles
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', () => {
+      // Wait for mobile menu animation to complete
+      setTimeout(updateLanguageDisplay, 100);
+    });
+  }
+</script>
+
+<style>
+  /* Mobile-specific styles */
+  @media (max-width: 768px) {
+    .language-dropdown {
+      position: relative;
+      width: 100%;
+      box-shadow: none;
+      border: 1px solid #e5e7eb;
+      margin-top: 0.25rem;
+      left: 0;
+      right: 0;
+    }
+    
+    .language-selector {
+      width: 100%;
+    }
+    
+    .language-option {
+      padding: 0.75rem 1rem;
+    }
+  }
+</style>

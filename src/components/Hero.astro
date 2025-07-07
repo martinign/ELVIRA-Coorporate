@@ -1,0 +1,60 @@
+---
+import Button from './Button.astro';
+---
+
+<section class="py-20 relative overflow-hidden">
+  <!-- Background gradient blob -->
+  <div class="absolute -top-24 -right-24 w-96 h-96 bg-primary-200 rounded-full opacity-20 blur-3xl"></div>
+  <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-secondary-300 rounded-full opacity-20 blur-3xl"></div>
+  
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+      <div class="sm:text-center md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:flex-col lg:justify-center">
+        <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+          <span class="block">Digital Concierge</span>
+          <span class="block text-primary-700" data-i18n="home.hero.title">Platform for Hotels</span>
+        </h1>
+        <p class="mt-6 text-base text-gray-600 sm:text-lg md:text-xl" data-i18n="home.hero.subtitle">
+          Enhance efficiency, effectiveness, and guest experience in hotels through our customizable digital platform. A turnkey solution for independent hotels and boutique chains.
+        </p>
+        <div class="mt-10 sm:flex sm:justify-center lg:justify-start">
+          <div class="rounded-md shadow">
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-3">
+              <Button 
+                href="/contact" 
+                variant="primary" 
+                size="lg"
+                class="bg-blue-600 text-white px-6 py-3 rounded-lg transition duration-300 ease-in-out transform hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 hover:scale-105 shadow-md"
+              >
+                <span data-i18n="home.hero.cta.demo">Request a Demo</span>
+              </Button>
+            
+              <Button 
+                href="/how-it-works" 
+                variant="outline" 
+                size="lg"
+                class="border border-gray-400 text-gray-700 px-6 py-3 rounded-lg transition duration-300 ease-in-out transform hover:bg-blue-600 hover:text-white hover:border-blue-600 hover:scale-105"
+              >
+                <span data-i18n="home.hero.cta.learn">Learn How It Works</span>
+              </Button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="mt-12 lg:mt-0 lg:col-span-6">
+        <div class="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md">
+          <div class="relative block w-full bg-white rounded-lg overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Hotel guest using digital concierge platform on tablet"
+              class="w-full"
+              data-i18n-alt="home.hero.image.alt"
+            />
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

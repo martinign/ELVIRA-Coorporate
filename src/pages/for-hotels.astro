@@ -1,0 +1,212 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ForHotels from '../components/ForHotels.astro';
+import CTA from '../components/CTA.astro';
+
+
+const testimonials = [
+  {
+    content: "Implementing ELVIRA at our boutique hotel has transformed our guest experience. The platform is incredibly intuitive for both our staff and guests, and we've seen a significant increase in room service orders and excursion listings.",
+    i18nKey: "forHotels.testimonials.items.0.content",
+    author: "Maria Rodriguez",
+    i18nAuthorKey: "forHotels.testimonials.items.0.author",
+    role: "General Manager",
+    i18nRoleKey: "forHotels.testimonials.items.0.role",
+    hotel: "Seaside Boutique Hotel",
+    i18nHotelKey: "forHotels.testimonials.items.0.hotel"
+  },
+  {
+    content: "As an independent hotel without a large IT team, ELVIRA provided exactly what we needed - a turnkey digital concierge solution that our guests love. The multilingual support has been especially valuable for our international clientele.",
+    i18nKey: "forHotels.testimonials.items.1.content",
+    author: "Pierre Dubois",
+    i18nAuthorKey: "forHotels.testimonials.items.1.author",
+    role: "Hotel Owner",
+    i18nRoleKey: "forHotels.testimonials.items.1.role",
+    hotel: "Château Moderne",
+    i18nHotelKey: "forHotels.testimonials.items.1.hotel"
+  },
+  {
+    content: "The customization options allowed us to perfectly align the platform with our brand identity. Our guests particularly enjoy the seamless experience and the ability to chat with reception in their native language.",
+    i18nKey: "forHotels.testimonials.items.2.content",
+    author: "Sarah Johnson",
+    i18nAuthorKey: "forHotels.testimonials.items.2.author",
+    role: "Operations Director",
+    i18nRoleKey: "forHotels.testimonials.items.2.role",
+    hotel: "Urban Retreat Hotel",
+    i18nHotelKey: "forHotels.testimonials.items.2.hotel"
+  }
+];
+
+
+
+const faqs = [
+  {
+    question: "How long does it take to implement ELVIRA at our hotel?",
+    i18nQuestionKey: "forHotels.faq.items.0.question",
+    answer: "Implementation typically takes 2-3 weeks from signing to full deployment. Our team handles the setup, configuration, and staff training to ensure a smooth transition.",
+    i18nAnswerKey: "forHotels.faq.items.0.answer"
+  },
+  {
+    question: "Does ELVIRA require special hardware or IT infrastructure?",
+    i18nQuestionKey: "forHotels.faq.items.1.question",
+    answer: "No, ELVIRA is a cloud-based solution that works with your existing infrastructure. All your hotel needs is reliable Wi-Fi and standard computers for the management dashboard.",
+    i18nAnswerKey: "forHotels.faq.items.1.answer"
+  },
+  {
+    question: "Can ELVIRA integrate with our existing PMS and listing systems?",
+    i18nQuestionKey: "forHotels.faq.items.2.question",
+    answer: "Yes, ELVIRA is designed to integrate with popular property management systems and listing engines. Our team will work with you to ensure smooth integration with your existing systems.",
+    i18nAnswerKey: "forHotels.faq.items.2.answer"
+  },
+  {
+    question: "How do guests access the platform?",
+    i18nQuestionKey: "forHotels.faq.items.3.question",
+    answer: "Guests simply scan a QR code in their room, which connects them to your hotel's Wi-Fi and redirects them to the login page. They then enter their room number and a unique verification code provided at check-in.",
+    i18nAnswerKey: "forHotels.faq.items.3.answer"
+  },
+  {
+    question: "Is guest data secure and private?",
+    i18nQuestionKey: "forHotels.faq.items.4.question",
+    answer: "Absolutely. ELVIRA operates on a room-based session system rather than personal data collection. We comply with global data protection regulations including GDPR and CCPA.",
+    i18nAnswerKey: "forHotels.faq.items.4.answer"
+  },
+  {
+    question: "Can we customize the look and features of ELVIRA?",
+    i18nQuestionKey: "forHotels.faq.items.5.question",
+    answer: "Yes, ELVIRA is fully customizable. Hotels can adjust branding, choose which features to display, and manage content through an intuitive dashboard.",
+    i18nAnswerKey: "forHotels.faq.items.5.answer"
+  }
+];
+---
+
+<Layout 
+  title="ELVIRA for Hotels - Digital Concierge Platform" 
+  description="Learn how ELVIRA's digital concierge platform can enhance guest experiences and streamline operations for independent hotels."
+>
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+        <div class="lg:col-span-5">
+          <h1 class="text-4xl font-extrabold text-gray-900 sm:text-5xl" data-i18n="forHotels.title">
+            Transform Your Guest Experience
+          </h1>
+          <p class="mt-4 text-lg text-gray-600" data-i18n="forHotels.subtitle">
+            ELVIRA offers independent and boutique hotels the same digital concierge capabilities that major chains provide, without the need for extensive IT resources.
+          </p>
+          <div class="mt-8">
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <div class="flex-shrink-0">
+                  <svg class="h-6 w-6 text-primary-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <p class="ml-3 text-base text-gray-600" data-i18n="forHotels.features.0">
+                  <strong class="font-medium text-gray-900">No IT Investment Required:</strong> A plug-and-play solution that works with your existing infrastructure.
+                </p>
+              </li>
+              <li class="flex items-start">
+                <div class="flex-shrink-0">
+                  <svg class="h-6 w-6 text-primary-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <p class="ml-3 text-base text-gray-600" data-i18n="forHotels.features.1">
+                  <strong class="font-medium text-gray-900">Increase Guest Satisfaction:</strong> Provide a modern, convenient digital experience that enhances their stay.
+                </p>
+              </li>
+              <li class="flex items-start">
+                <div class="flex-shrink-0">
+                  <svg class="h-6 w-6 text-primary-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <p class="ml-3 text-base text-gray-600" data-i18n="forHotels.features.2">
+                  <strong class="font-medium text-gray-900">Boost Revenue:</strong> Increase in-room dining, excursion listings, and hotel shop purchases.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-12 lg:mt-0 lg:col-span-7">
+          <div class="relative h-64 overflow-hidden rounded-lg lg:h-auto">
+            <img 
+              src="https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+              alt="Hotel guest using tablet"
+              class="object-cover w-full h-full"
+              data-i18n-alt="forHotels.heroImage.alt"
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <ForHotels />
+
+<!--
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl" data-i18n="forHotels.testimonials.title">
+          What Hotels Say About ELVIRA
+        </h2>
+        <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600" data-i18n="forHotels.testimonials.subtitle">
+          See how ELVIRA has helped independent hotels enhance their guest experience.
+        </p>
+      </div>
+      
+      <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
+        {testimonials.map(testimonial => (
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="flex items-center justify-center h-12">
+              <svg class="h-8 w-8 text-primary-400" fill="currentColor" viewBox="0 0 32 32">
+                <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+              </svg>
+            </div>
+            <div class="mt-6">
+              <p class="text-base text-gray-600 italic" data-i18n={testimonial.i18nKey}>"{testimonial.content}"</p>
+              <div class="mt-4">
+                <p class="text-base font-medium text-gray-900" data-i18n={testimonial.i18nAuthorKey}>{testimonial.author}</p>
+                <p class="text-sm text-gray-600">
+                  <span data-i18n={testimonial.i18nRoleKey}>{testimonial.role}</span>, 
+                  <span data-i18n={testimonial.i18nHotelKey}>{testimonial.hotel}</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  ---
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl" data-i18n="forHotels.faq.title">
+          Frequently Asked Questions
+        </h2>
+        <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600" data-i18n="forHotels.faq.subtitle">
+          Common questions about implementing ELVIRA at your hotel.
+        </p>
+      </div>
+      
+      <div class="mt-16">
+        <dl class="space-y-8">
+          {faqs.map(faq => (
+            <div class="pt-6 border-t border-gray-200">
+              <dt class="text-lg font-medium text-gray-900" data-i18n={faq.i18nQuestionKey}>
+                {faq.question}
+              </dt>
+              <dd class="mt-2 text-base text-gray-600" data-i18n={faq.i18nAnswerKey}>
+                {faq.answer}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </div>
+  </section>
+  
+  <CTA />
+</Layout>

@@ -1,0 +1,128 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+
+const team = [
+  {
+    name: 'Martin I Paris',
+    i18nNameKey: 'about.team.members.ceo.name',
+    role: 'CEO & Founder',
+    i18nRoleKey: 'about.team.members.ceo.role',
+    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
+  },
+  {
+    name: 'Thomas Hubert Tarasewicz',
+    i18nNameKey: 'about.team.members.cto.name',
+    role: 'CTO',
+    i18nRoleKey: 'about.team.members.cto.role',
+    image: 'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
+  },
+  {
+    name: 'Dries Vincent',
+    i18nNameKey: 'about.team.members.product.name',
+    role: 'Head of Product',
+    i18nRoleKey: 'about.team.members.product.role',
+    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
+  },
+  {
+    name: 'Lindsay Walton',
+    i18nNameKey: 'about.team.members.marketing.name',
+    role: 'Head of Marketing',
+    i18nRoleKey: 'about.team.members.marketing.role',
+    image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
+  }
+];
+
+const values = [
+  {
+    title: 'Innovation',
+    i18nTitleKey: 'about.values.innovation.title',
+    description: 'Bringing advanced technology to traditional hospitality, constantly evolving to meet the needs of modern hotels and guests.',
+    i18nDescKey: 'about.values.innovation.description'
+  },
+  {
+    title: 'Customization',
+    i18nTitleKey: 'about.values.customization.title',
+    description: "Ensuring hotels maintain full control over the guest experience, with flexible solutions that adapt to each property's unique identity.",
+    i18nDescKey: 'about.values.customization.description'
+  },
+  {
+    title: 'Privacy & Security',
+    i18nTitleKey: 'about.values.privacy.title',
+    description: 'Prioritizing data security through session-based identification rather than personal data collection.',
+    i18nDescKey: 'about.values.privacy.description'
+  },
+  {
+    title: 'Efficiency',
+    i18nTitleKey: 'about.values.efficiency.title',
+    description: 'Streamlining guest services for hotels and enhancing convenience for guests, maximizing operational effectiveness.',
+    i18nDescKey: 'about.values.efficiency.description'
+  }
+];
+---
+
+<Layout 
+  title="About Comcierge - Our Story & Mission" 
+  description="Learn about Comcierge's mission to provide accessible, flexible digital concierge solutions for independent hotels worldwide."
+>
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl font-extrabold text-gray-900 sm:text-5xl" data-i18n="about.title">
+          About Comcierge
+        </h1>
+        <p class="mt-4 text-xl text-gray-600" data-i18n="about.subtitle">
+          Bridging the technology gap between luxury hotel chains and independent establishments.
+        </p>
+      </div>
+      
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900" data-i18n="about.mission.title">Our Mission</h2>
+          <p class="mt-4 text-lg text-gray-600" data-i18n="about.mission.description">
+            To provide an accessible, flexible, and high-quality digital concierge solution that enhances guest satisfaction while helping independent hotels modernize their service offerings.
+          </p>
+        </div>
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900" data-i18n="about.vision.title">Our Vision</h2>
+          <p class="mt-4 text-lg text-gray-600" data-i18n="about.vision.description">
+            To become the preferred concierge-as-a-service platform for independent hotels worldwide, bridging the technology gap between luxury hotel chains and smaller upscale establishments.
+          </p>
+        </div>
+      </div>
+      
+      <div class="mt-16">
+        <h2 class="text-3xl font-bold text-gray-900 text-center" data-i18n="about.values.title">Our Values</h2>
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+          {values.map(value => (
+            <div class="bg-gray-50 p-6 rounded-lg border border-gray-100">
+              <h3 class="text-xl font-bold text-primary-700" data-i18n={value.i18nTitleKey}>{value.title}</h3>
+              <p class="mt-2 text-gray-600" data-i18n={value.i18nDescKey}>{value.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      <div class="mt-16">
+        <h2 class="text-3xl font-bold text-gray-900 text-center" data-i18n="about.team.title">Our Team</h2>
+        <div class="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {team.map(member => (
+            <div class="text-center">
+              <div class="mx-auto h-40 w-40 rounded-full overflow-hidden">
+                <img src={member.image} alt={member.name} class="h-full w-full object-cover" data-i18n-alt={member.i18nNameKey} />
+              </div>
+              <h3 class="mt-4 text-lg font-medium text-gray-900" data-i18n={member.i18nNameKey}>{member.name}</h3>
+              <p class="text-sm text-gray-600" data-i18n={member.i18nRoleKey}>{member.role}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      <div class="mt-16 text-center">
+        <Button href="/contact" variant="primary" size="lg">
+          <span data-i18n="about.team.cta">Get in Touch</span>
+        </Button>
+      </div>
+    </div>
+  </section>
+</Layout>

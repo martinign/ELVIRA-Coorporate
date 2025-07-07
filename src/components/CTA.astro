@@ -1,0 +1,30 @@
+---
+import Button from './Button.astro';
+---
+
+<section class="py-24 bg-primary-700">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <h2 class="text-3xl font-bold text-white sm:text-4xl" data-i18n="cta.title">
+        Ready to transform your hotel's guest experience?
+      </h2>
+      <p class="mt-6 max-w-3xl mx-auto text-xl text-primary-100" data-i18n="cta.subtitle">
+        Join your hotel to enhance your services with E·L·V·I·R·A's digital concierge platform.
+      </p>
+      
+      <div class="mt-12 flex justify-center space-x-4">
+        <Button href="/contact" variant="primary" size="lg" 
+          class="bg-primary-600 text-white border border-white shadow-md hover:bg-white hover:text-primary-600 hover:border-2 hover:shadow-lg transition-all duration-300 ease-in-out">
+          <span data-i18n="cta.demo">Request a Demo</span>
+        </Button>
+        
+        <Button href="/pricing" variant="outline" size="lg" 
+          class="border border-white text-white hover:bg-white hover:text-primary-600 hover:shadow-lg transition-all duration-300 ease-in-out">
+          <span data-i18n="cta.pricing">View Pricing</span>
+        </Button>
+
+
+      </div>
+    </div>
+  </div>
+</section>

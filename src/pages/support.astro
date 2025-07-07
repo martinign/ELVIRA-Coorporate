@@ -1,0 +1,317 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+
+const supportCategories = [
+  {
+    title: 'Getting Started',
+    i18nTitleKey: 'support.categories.gettingStarted.title',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+          </svg>`,
+    links: [
+      { 
+        title: 'Platform Overview', 
+        i18nKey: 'support.categories.gettingStarted.links.overview',
+        url: '#' 
+      },
+      { 
+        title: 'Implementation Guide', 
+        i18nKey: 'support.categories.gettingStarted.links.implementation',
+        url: '#' 
+      },
+      { 
+        title: 'Staff Training Resources', 
+        i18nKey: 'support.categories.gettingStarted.links.training',
+        url: '#' 
+      },
+      { 
+        title: 'Quick Start Guide', 
+        i18nKey: 'support.categories.gettingStarted.links.quickStart',
+        url: '#' 
+      }
+    ]
+  },
+  {
+    title: 'Hotel Dashboard',
+    i18nTitleKey: 'support.categories.dashboard.title',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 7.125C2.25 6.504 2.754 6 3.375 6h6c.621 0 1.125.504 1.125 1.125v3.75c0 .621-.504 1.125-1.125 1.125h-6a1.125 1.125 0 0 1-1.125-1.125v-3.75ZM14.25 8.625c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v8.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 0 1-1.125-1.125v-8.25ZM3.75 16.125c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 0 1-1.125-1.125v-2.25Z" />
+          </svg>`,
+    links: [
+      { 
+        title: 'Dashboard Features', 
+        i18nKey: 'support.categories.dashboard.links.features',
+        url: '#' 
+      },
+      { 
+        title: 'Content Management', 
+        i18nKey: 'support.categories.dashboard.links.contentManagement',
+        url: '#' 
+      },
+      { 
+        title: 'Guest Communication', 
+        i18nKey: 'support.categories.dashboard.links.guestCommunication',
+        url: '#' 
+      },
+      { 
+        title: 'Analytics & Reporting', 
+        i18nKey: 'support.categories.dashboard.links.analytics',
+        url: '#' 
+      }
+    ]
+  },
+  {
+    title: 'Guest Experience',
+    i18nTitleKey: 'support.categories.guestExperience.title',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+          </svg>`,
+    links: [
+      { 
+        title: 'Guest Verification System', 
+        i18nKey: 'support.categories.guestExperience.links.verification',
+        url: '#' 
+      },
+      { 
+        title: 'Multilingual Support', 
+        i18nKey: 'support.categories.guestExperience.links.multilingual',
+        url: '#' 
+      },
+      { 
+        title: 'Room Service & Dining', 
+        i18nKey: 'support.categories.guestExperience.links.diningService',
+        url: '#' 
+      },
+      { 
+        title: 'Excursions & Activities', 
+        i18nKey: 'support.categories.guestExperience.links.activities',
+        url: '#' 
+      }
+    ]
+  },
+  {
+    title: 'Integrations',
+    i18nTitleKey: 'support.categories.integrations.title',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 0 1-.657.643 48.39 48.39 0 0 1-4.163-.3c.186 1.613.293 3.25.315 4.907a.656.656 0 0 1-.658.663v0c-.355 0-.676-.186-.959-.401a1.647 1.647 0 0 0-1.003-.349c-1.036 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401v0c.31 0 .555.26.532.57a48.039 48.039 0 0 1-.642 5.056c1.518.19 3.058.309 4.616.354a.64.64 0 0 0 .657-.643v0c0-.355-.186-.676-.401-.959a1.647 1.647 0 0 1-.349-1.003c0-1.035 1.008-1.875 2.25-1.875 1.243 0 2.25.84 2.25 1.875 0 .369-.128.713-.349 1.003-.215.283-.4.604-.4.959v0c0 .333.277.599.61.58a48.1 48.1 0 0 0 4.126-.336l-.349-3.647-2.565 1.478a.52.52 0 0 1-.554-.063v0a.52.52 0 0 1-.123-.596l1.068-2.536a.52.52 0 0 1 .607-.294l2.792.919c.22.072.342.311.224.521l-1.74 3.132c-.192.345-.518.557-.877.578a48.128 48.128 0 0 1-5.343.044l-.211-.001a.601.601 0 0 0-.117 1.197c1.89.19 3.797.291 5.719.304a.64.64 0 0 0 .657-.642v0c0-.355-.186-.676-.401-.959-.221-.29-.349-.634-.349-1.003 0-1.035 1.007-1.875 2.25-1.875s2.25.84 2.25 1.875c0 .369-.128.713-.349 1.003-.215.283-.4.604-.4.959v0c0 .31.259.555.569.532 1.313-.101 2.619-.238 3.916-.412" />
+          </svg>`,
+    links: [
+      { 
+        title: 'PMS Integration', 
+        i18nKey: 'support.categories.integrations.links.pms',
+        url: '#' 
+      },
+      { 
+        title: 'Payment Processing', 
+        i18nKey: 'support.categories.integrations.links.payment',
+        url: '#' 
+      },
+      { 
+        title: 'Third-Party Services', 
+        i18nKey: 'support.categories.integrations.links.thirdParty',
+        url: '#' 
+      },
+      { 
+        title: 'API Documentation', 
+        i18nKey: 'support.categories.integrations.links.api',
+        url: '#' 
+      }
+    ]
+  },
+  {
+    title: 'Troubleshooting',
+    i18nTitleKey: 'support.categories.troubleshooting.title',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z" />
+          </svg>`,
+    links: [
+      { 
+        title: 'Common Issues', 
+        i18nKey: 'support.categories.troubleshooting.links.common',
+        url: '#' 
+      },
+      { 
+        title: 'Error Messages', 
+        i18nKey: 'support.categories.troubleshooting.links.errors',
+        url: '#' 
+      },
+      { 
+        title: 'Network Connectivity', 
+        i18nKey: 'support.categories.troubleshooting.links.connectivity',
+        url: '#' 
+      },
+      { 
+        title: 'System Requirements', 
+        i18nKey: 'support.categories.troubleshooting.links.requirements',
+        url: '#' 
+      }
+    ]
+  },
+  {
+    title: 'Billing & Account',
+    i18nTitleKey: 'support.categories.billing.title',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
+          </svg>`,
+    links: [
+      { 
+        title: 'Subscription Management', 
+        i18nKey: 'support.categories.billing.links.subscription',
+        url: '#' 
+      },
+      { 
+        title: 'Payment Methods', 
+        i18nKey: 'support.categories.billing.links.payment',
+        url: '#' 
+      },
+      { 
+        title: 'Invoices & Receipts', 
+        i18nKey: 'support.categories.billing.links.invoices',
+        url: '#' 
+      },
+      { 
+        title: 'Account Settings', 
+        i18nKey: 'support.categories.billing.links.account',
+        url: '#' 
+      }
+    ]
+  }
+];
+---
+
+<Layout 
+  title="Support - Comcierge Digital Concierge Platform" 
+  description="Get help with Comcierge's digital concierge platform. Access documentation, tutorials, and contact our support team."
+>
+  <section class="py-16 bg-gradient-to-b from-primary-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl font-extrabold text-gray-900 sm:text-5xl" data-i18n="support.title">
+          How Can We Help?
+        </h1>
+        <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-600" data-i18n="support.subtitle">
+          Find answers, access resources, and get support for your Comcierge digital concierge platform.
+        </p>
+        
+        <div class="mt-8 max-w-2xl mx-auto">
+          <div class="relative">
+            <input 
+              type="text" 
+              data-i18n-placeholder="support.searchPlaceholder"
+              placeholder="Search for help articles..." 
+              class="w-full py-3 px-4 pl-12 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
+            />
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {supportCategories.map(category => (
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="flex-shrink-0 inline-flex items-center justify-center h-10 w-10 rounded-md bg-primary-100 text-primary-700">
+                <Fragment set:html={category.icon} />
+              </div>
+              <h3 class="text-lg font-medium text-gray-900" data-i18n={category.i18nTitleKey}>{category.title}</h3>
+            </div>
+            
+            <ul class="space-y-2">
+              {category.links.map(link => (
+                <li>
+                  <a href={link.url} class="text-primary-700 hover:text-primary-800 text-sm" data-i18n={link.i18nKey}>
+                    {link.title} →
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="lg:grid lg:grid-cols-2 lg:gap-16">
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900" data-i18n="support.contactSupport.title">Contact Support</h2>
+          <p class="mt-4 text-lg text-gray-600" data-i18n="support.contactSupport.subtitle">
+            Can't find what you're looking for? Our support team is ready to help.
+          </p>
+          
+          <div class="mt-8 space-y-6">
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <svg class="h-6 w-6 text-primary-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div class="ml-3 text-base text-gray-600">
+                <p data-i18n="support.contactSupport.email">support@comcierge.com</p>
+                <p class="mt-1" data-i18n="support.contactSupport.emailResponse">We'll respond within 24 hours</p>
+              </div>
+            </div>
+            
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <svg class="h-6 w-6 text-primary-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+              </div>
+              <div class="ml-3 text-base text-gray-600">
+                <p data-i18n="support.contactSupport.phone">+1 (555) 123-4567</p>
+                <p class="mt-1" data-i18n="support.contactSupport.phoneHours">Mon-Fri 9am-5pm EST</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-8">
+            <Button href="/contact" variant="primary">
+              <span data-i18n="support.contactSupport.submitTicket">Submit a Ticket</span>
+            </Button>
+          </div>
+        </div>
+        
+        <div class="mt-12 lg:mt-0">
+          <h2 class="text-3xl font-bold text-gray-900" data-i18n="support.supportPlans.title">Support Plans</h2>
+          <p class="mt-4 text-lg text-gray-600" data-i18n="support.supportPlans.subtitle">
+            We offer different levels of support based on your subscription plan.
+          </p>
+          
+          <div class="mt-8 space-y-6">
+            <div class="border-b border-gray-200 pb-4">
+              <h3 class="text-lg font-medium text-gray-900" data-i18n="support.supportPlans.standard.title">Standard Support</h3>
+              <p class="mt-2 text-gray-600" data-i18n="support.supportPlans.standard.description">
+                Included with all plans. Email support with 24-hour response time, access to knowledge base and documentation.
+              </p>
+            </div>
+            
+            <div class="border-b border-gray-200 pb-4">
+              <h3 class="text-lg font-medium text-gray-900" data-i18n="support.supportPlans.premium.title">Premium Support</h3>
+              <p class="mt-2 text-gray-600" data-i18n="support.supportPlans.premium.description">
+                Included with Professional plans. Priority email and phone support with 8-hour response time, dedicated support representative.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="text-lg font-medium text-gray-900" data-i18n="support.supportPlans.enterprise.title">Enterprise Support</h3>
+              <p class="mt-2 text-gray-600" data-i18n="support.supportPlans.enterprise.description">
+                Included with Enterprise plans. 24/7 priority support, 4-hour response time for critical issues, dedicated account manager, and personalized onboarding.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

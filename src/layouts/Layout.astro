@@ -1,0 +1,191 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { 
+  title, 
+  description = 'E · L · V · I · R · A - Digital Concierge Platform for Hotels. Enhance efficiency, effectiveness, and guest experience in hotels through a customizable digital platform.'
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="min-h-screen bg-gradient-to-b from-slate-50 to-white" id="app">
+    <Navbar />
+    <slot />
+    <Footer />
+    
+    <script>
+      import { getLanguage, loadTranslations } from '../utils/i18n.js';
+      
+      // Initialize translations
+      async function initTranslations() {
+        const lang = getLanguage();
+        document.documentElement.lang = lang;
+        
+        try {
+          const translations = await loadTranslations(lang);
+          
+          // Apply translations to elements with data-i18n attribute
+          const elements = document.querySelectorAll('[data-i18n]');
+          elements.forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (key) {
+              const keyParts = key.split('.');
+              let value = translations;
+              
+              // Navigate through nested properties
+              for (const part of keyParts) {
+                if (value && typeof value === 'object' && part in value) {
+                  value = value[part];
+                } else {
+                  value = null;
+                  break;
+                }
+              }
+              
+              if (value !== null && typeof value !== 'object') {
+                el.textContent = value;
+              }
+            }
+          });
+          
+          // Apply translations to elements with data-i18n-placeholder attribute (for inputs)
+          const placeholderElements = document.querySelectorAll('[data-i18n-placeholder]');
+          placeholderElements.forEach(el => {
+            const key = el.getAttribute('data-i18n-placeholder');
+            if (key && el instanceof HTMLElement) {
+              const keyParts = key.split('.');
+              let value = translations;
+              
+              for (const part of keyParts) {
+                if (value && typeof value === 'object' && part in value) {
+                  value = value[part];
+                } else {
+                  value = null;
+                  break;
+                }
+              }
+              
+              if (value !== null && typeof value !== 'object' && 'placeholder' in el) {
+                el.placeholder = value;
+              }
+            }
+          });
+
+          // Apply translations to elements with data-i18n-title attribute (for title attributes)
+          const titleElements = document.querySelectorAll('[data-i18n-title]');
+          titleElements.forEach(el => {
+            const key = el.getAttribute('data-i18n-title');
+            if (key && el instanceof HTMLElement) {
+              const keyParts = key.split('.');
+              let value = translations;
+              
+              for (const part of keyParts) {
+                if (value && typeof value === 'object' && part in value) {
+                  value = value[part];
+                } else {
+                  value = null;
+                  break;
+                }
+              }
+              
+              if (value !== null && typeof value !== 'object') {
+                el.title = value;
+              }
+            }
+          });
+
+          // Apply translations to elements with data-i18n-value attribute (for input values)
+          const valueElements = document.querySelectorAll('[data-i18n-value]');
+          valueElements.forEach(el => {
+            const key = el.getAttribute('data-i18n-value');
+            if (key && el instanceof HTMLInputElement) {
+              const keyParts = key.split('.');
+              let value = translations;
+              
+              for (const part of keyParts) {
+                if (value && typeof value === 'object' && part in value) {
+                  value = value[part];
+                } else {
+                  value = null;
+                  break;
+                }
+              }
+              
+              if (value !== null && typeof value !== 'object') {
+                el.value = value;
+              }
+            }
+          });
+
+          // Apply translations to elements with data-i18n-aria-label attribute
+          const ariaLabelElements = document.querySelectorAll('[data-i18n-aria-label]');
+          ariaLabelElements.forEach(el => {
+            const key = el.getAttribute('data-i18n-aria-label');
+            if (key && el instanceof HTMLElement) {
+              const keyParts = key.split('.');
+              let value = translations;
+              
+              for (const part of keyParts) {
+                if (value && typeof value === 'object' && part in value) {
+                  value = value[part];
+                } else {
+                  value = null;
+                  break;
+                }
+              }
+              
+              if (value !== null && typeof value !== 'object') {
+                el.setAttribute('aria-label', value);
+              }
+            }
+          });
+
+          // Also update the document title if there's a title translation
+          if (translations.siteTitle && typeof translations.siteTitle === 'string') {
+            document.title = translations.siteTitle;
+          }
+
+          // Dispatch an event to notify components that translations are loaded
+          document.dispatchEvent(new CustomEvent('translationsLoaded', { detail: { lang } }));
+        } catch (error) {
+          console.error('Error initializing translations:', error);
+        }
+      }
+      
+      document.addEventListener('DOMContentLoaded', initTranslations);
+      window.addEventListener('hashchange', initTranslations);
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', system-ui, sans-serif;
+  }
+
+  .announcement-bar {
+    background: linear-gradient(90deg, #3238d4 0%, #5c6cf7 100%);
+  }
+</style>

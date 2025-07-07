@@ -1,0 +1,269 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+
+const resources = [
+  {
+    category: 'Blog',
+    i18nCategoryKey: 'resources.categories.blog',
+    items: [
+      {
+        title: 'The Future of Digital Concierge Services',
+        i18nTitleKey: 'resources.blog.future.title',
+        description: 'Explore how AI and mobile technology are transforming hotel guest experiences.',
+        i18nDescKey: 'resources.blog.future.description',
+        date: 'May 15, 2025',
+        i18nDateKey: 'resources.blog.future.date',
+        image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        url: '#'
+      },
+      {
+        title: 'How Independent Hotels Can Compete with Major Chains',
+        i18nTitleKey: 'resources.blog.compete.title',
+        description: 'Digital strategies for boutique hotels to provide premium guest experiences.',
+        i18nDescKey: 'resources.blog.compete.description',
+        date: 'April 22, 2025',
+        i18nDateKey: 'resources.blog.compete.date',
+        image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        url: '#'
+      },
+      {
+        title: 'Multilingual Support: Breaking Language Barriers in Hospitality',
+        i18nTitleKey: 'resources.blog.multilingual.title',
+        description: 'Best practices for serving international guests through digital platforms.',
+        i18nDescKey: 'resources.blog.multilingual.description',
+        date: 'March 10, 2025',
+        i18nDateKey: 'resources.blog.multilingual.date',
+        image: 'https://images.unsplash.com/photo-1596524430615-b46475ddff6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        url: '#'
+      }
+    ]
+  },
+  {
+    category: 'Case Studies',
+    i18nCategoryKey: 'resources.categories.caseStudies',
+    items: [
+      {
+        title: 'Boutique Hotel Increases Revenue by 23%',
+        i18nTitleKey: 'resources.caseStudies.boutique.title',
+        description: 'How The Seaside Retreat leveraged digital concierge services to boost guest spending.',
+        i18nDescKey: 'resources.caseStudies.boutique.description',
+        location: 'Miami, Florida',
+        i18nLocationKey: 'resources.caseStudies.boutique.location',
+        image: 'https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        url: '#'
+      },
+      {
+        title: 'Streamlining Operations at Mountain Lodge',
+        i18nTitleKey: 'resources.caseStudies.mountain.title',
+        description: 'Staff efficiency improved by 35% after implementing Comcierge platform.',
+        i18nDescKey: 'resources.caseStudies.mountain.description',
+        location: 'Aspen, Colorado',
+        i18nLocationKey: 'resources.caseStudies.mountain.location',
+        image: 'https://images.unsplash.com/photo-1548704606-191a5f9d487b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        url: '#'
+      }
+    ]
+  },
+  {
+    category: 'Documentation',
+    i18nCategoryKey: 'resources.categories.documentation',
+    items: [
+      {
+        title: 'Implementation Guide',
+        i18nTitleKey: 'resources.documentation.implementation.title',
+        description: 'Step-by-step process for setting up Comcierge at your hotel.',
+        i18nDescKey: 'resources.documentation.implementation.description',
+        type: 'Technical Guide',
+        i18nTypeKey: 'resources.documentation.implementation.type',
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+              </svg>`,
+        url: '#'
+      },
+      {
+        title: 'API Reference',
+        i18nTitleKey: 'resources.documentation.api.title',
+        description: 'Complete documentation for Comcierge integration capabilities.',
+        i18nDescKey: 'resources.documentation.api.description',
+        type: 'Developer Resource',
+        i18nTypeKey: 'resources.documentation.api.type',
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+              </svg>`,
+        url: '#'
+      },
+      {
+        title: 'User Manual',
+        i18nTitleKey: 'resources.documentation.userManual.title',
+        description: 'Comprehensive guide for hotel staff operating the platform.',
+        i18nDescKey: 'resources.documentation.userManual.description',
+        type: 'User Guide',
+        i18nTypeKey: 'resources.documentation.userManual.type',
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+              </svg>`,
+        url: '#'
+      }
+    ]
+  },
+  {
+    category: 'Videos & Webinars',
+    i18nCategoryKey: 'resources.categories.videos',
+    items: [
+      {
+        title: 'Platform Walkthrough',
+        i18nTitleKey: 'resources.videos.walkthrough.title',
+        description: 'A complete tour of the Comcierge guest and hotel management interfaces.',
+        i18nDescKey: 'resources.videos.walkthrough.description',
+        duration: '32 minutes',
+        i18nDurationKey: 'resources.videos.walkthrough.duration',
+        thumbnail: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        url: '#'
+      },
+      {
+        title: 'Maximizing Revenue Through Digital Concierge',
+        i18nTitleKey: 'resources.videos.revenue.title',
+        description: 'Webinar with industry experts on leveraging technology for hotel profitability.',
+        i18nDescKey: 'resources.videos.revenue.description',
+        duration: '48 minutes',
+        i18nDurationKey: 'resources.videos.revenue.duration',
+        thumbnail: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        url: '#'
+      }
+    ]
+  }
+];
+---
+
+<Layout 
+  title="Resources - Comcierge Digital Concierge Platform" 
+  description="Explore Comcierge's resources including blog posts, case studies, documentation, and webinars about our digital concierge platform."
+>
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl font-extrabold text-gray-900 sm:text-5xl" data-i18n="resources.title">
+          Resources
+        </h1>
+        <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-600" data-i18n="resources.subtitle">
+          Discover insights, guides, and success stories to help you get the most from your digital concierge platform.
+        </p>
+      </div>
+      
+      <div class="mt-16">
+        {resources.map((resourceCategory) => (
+          <div class="mb-16">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8" data-i18n={resourceCategory.i18nCategoryKey}>{resourceCategory.category}</h2>
+            
+            {resourceCategory.category === 'Blog' && (
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {resourceCategory.items.map((item) => (
+                  <div class="bg-white rounded-lg shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-lg">
+                    <img src={item.image} alt={item.title} class="w-full h-48 object-cover" data-i18n-alt={item.i18nTitleKey} />
+                    <div class="p-6">
+                      <p class="text-sm text-primary-700" data-i18n={item.i18nDateKey}>{item.date}</p>
+                      <h3 class="mt-2 text-xl font-semibold text-gray-900">
+                        <a href={item.url} class="hover:text-primary-700" data-i18n={item.i18nTitleKey}>{item.title}</a>
+                      </h3>
+                      <p class="mt-3 text-base text-gray-600" data-i18n={item.i18nDescKey}>{item.description}</p>
+                      <div class="mt-4">
+                        <a href={item.url} class="text-primary-700 hover:text-primary-800 font-medium">
+                          <span data-i18n="resources.actions.readArticle">Read Article</span> →
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+            
+            {resourceCategory.category === 'Case Studies' && (
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {resourceCategory.items.map((item) => (
+                  <div class="bg-white rounded-lg shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-lg">
+                    <div class="md:flex">
+                      <div class="md:flex-shrink-0">
+                        <img src={item.image} alt={item.title} class="h-48 w-full md:w-48 object-cover" data-i18n-alt={item.i18nTitleKey} />
+                      </div>
+                      <div class="p-6">
+                        <p class="text-sm text-primary-700" data-i18n={item.i18nLocationKey}>{item.location}</p>
+                        <h3 class="mt-2 text-xl font-semibold text-gray-900">
+                          <a href={item.url} class="hover:text-primary-700" data-i18n={item.i18nTitleKey}>{item.title}</a>
+                        </h3>
+                        <p class="mt-3 text-base text-gray-600" data-i18n={item.i18nDescKey}>{item.description}</p>
+                        <div class="mt-4">
+                          <a href={item.url} class="text-primary-700 hover:text-primary-800 font-medium">
+                            <span data-i18n="resources.actions.viewCaseStudy">View Case Study</span> →
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+            
+            {resourceCategory.category === 'Documentation' && (
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {resourceCategory.items.map((item) => (
+                  <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-primary-100 text-primary-700 mb-4">
+                      <Fragment set:html={item.icon} />
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900" data-i18n={item.i18nTitleKey}>{item.title}</h3>
+                    <p class="mt-2 text-sm text-primary-700" data-i18n={item.i18nTypeKey}>{item.type}</p>
+                    <p class="mt-3 text-base text-gray-600" data-i18n={item.i18nDescKey}>{item.description}</p>
+                    <div class="mt-4">
+                      <a href={item.url} class="text-primary-700 hover:text-primary-800 font-medium">
+                        <span data-i18n="resources.actions.accessDocument">Access Document</span> →
+                      </a>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+            
+            {resourceCategory.category === 'Videos & Webinars' && (
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {resourceCategory.items.map((item) => (
+                  <div class="bg-white rounded-lg shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-lg">
+                    <div class="relative">
+                      <img src={item.thumbnail} alt={item.title} class="w-full h-64 object-cover" data-i18n-alt={item.i18nTitleKey} />
+                      <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="bg-white bg-opacity-80 rounded-full p-3">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-primary-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="p-6">
+                      <p class="text-sm text-primary-700" data-i18n={item.i18nDurationKey}>{item.duration}</p>
+                      <h3 class="mt-2 text-xl font-semibold text-gray-900">
+                        <a href={item.url} class="hover:text-primary-700" data-i18n={item.i18nTitleKey}>{item.title}</a>
+                      </h3>
+                      <p class="mt-3 text-base text-gray-600" data-i18n={item.i18nDescKey}>{item.description}</p>
+                      <div class="mt-4">
+                        <a href={item.url} class="text-primary-700 hover:text-primary-800 font-medium">
+                          <span data-i18n="resources.actions.watchVideo">Watch Video</span> →
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+            
+            <div class="mt-8 text-center">
+              <Button href={`/${resourceCategory.category.toLowerCase().replace(' & ', '-')}`} variant="outline">
+                <span data-i18n="resources.viewAll">View All</span> {resourceCategory.category}
+              </Button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

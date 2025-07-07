@@ -1,0 +1,181 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+
+const features = [
+  {
+    title: 'Guest Session Management',
+    i18nKey: 'howItWorks.features.verification.title',
+    description: 'Secure and private authentication with unique codes that expire after checkout.',
+    i18nDescKey: 'howItWorks.features.verification.description',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+          </svg>`
+  },
+  {
+    title: 'Multi-language Support',
+    i18nKey: 'howItWorks.features.multilingual.title',
+    description: 'Built-in automatic translation for guest-hotel communication in multiple languages.',
+    i18nDescKey: 'howItWorks.features.multilingual.description',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m10.5 21 5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 0 1 6-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 0 1-3.827-5.802" />
+          </svg>`
+  },
+  {
+    title: 'Content Management System',
+    i18nKey: 'howItWorks.features.cms.title',
+    description: 'Simple dashboard for hotels to manage services, announcements, and offerings.',
+    i18nDescKey: 'howItWorks.features.cms.description',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
+          </svg>`
+  },
+  {
+    title: 'Live Chat with Reception',
+    i18nKey: 'howItWorks.features.chat.title',
+    description: 'Real-time communication between guests and hotel staff through the platform.',
+    i18nDescKey: 'howItWorks.features.chat.description',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+          </svg>`
+  }
+];
+
+const sections = [
+  {
+    title: 'Amenities',
+    i18nKey: 'howItWorks.interface.amenities.title',
+    description: 'View and request available hotel services directly from your device.',
+    i18nDescKey: 'howItWorks.interface.amenities.description',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
+          </svg>`
+  },
+  {
+    title: 'Dine In',
+    i18nKey: 'howItWorks.interface.dineIn.title',
+    description: "Order room service or book a table at the hotel's restaurant with ease.",
+    i18nDescKey: 'howItWorks.interface.dineIn.description',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8.25c-1.335 0-2.603.53-3.536 1.464a4.986 4.986 0 0 0-1.464 3.536c0 1.349.536 2.629 1.493 3.575a5.01 5.01 0 0 0 3.507 1.423 4.95 4.95 0 0 0 3.175-1.125M12 8.25a9.75 9.75 0 0 0-9.75 9.75M12 8.25a9.75 9.75 0 0 1 9.75 9.75M4.5 19.5a15 15 0 0 1 15 0" />
+          </svg>`
+  },
+  {
+    title: 'Hotel Shop',
+    i18nKey: 'howItWorks.interface.shop.title',
+    description: 'Browse and purchase products available within the hotel with delivery to your room.',
+    i18nDescKey: 'howItWorks.interface.shop.description',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+          </svg>`
+  },
+  {
+    title: 'Excursions',
+    i18nKey: 'howItWorks.interface.excursions.title',
+    description: 'Book tours and activities offered by the hotel directly from your device.',
+    i18nDescKey: 'howItWorks.interface.excursions.description',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" />
+          </svg>`
+  },
+  {
+    title: 'Dine Out',
+    i18nKey: 'howItWorks.interface.dineOut.title',
+    description: 'Discover recommended external restaurants approved by the hotel.',
+    i18nDescKey: 'howItWorks.interface.dineOut.description',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m15 10.5 3 3m0 0 3-3m-3 3V1.5M5.25 6a3 3 0 0 1 3-3h1.5a3 3 0 0 1 3 3M5.25 19.5V18a3 3 0 0 1 3-3h9.75" />
+          </svg>`
+  },
+  {
+    title: 'Live Chat',
+    i18nKey: 'howItWorks.interface.chat.title',
+    description: 'Chat with reception in real-time, with automatic translation into multiple languages.',
+    i18nDescKey: 'howItWorks.interface.chat.description',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+          </svg>`
+  }
+];
+---
+
+<Layout 
+  title="How Comcierge Works - Digital Concierge Platform" 
+  description="Learn how Comcierge's digital concierge platform enhances the hotel experience for both guests and staff."
+>
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl font-extrabold text-gray-900 sm:text-5xl" data-i18n="howItWorks.title">
+          How Comcierge Works
+        </h1>
+        <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-600" data-i18n="howItWorks.subtitle">
+          A comprehensive digital concierge solution designed specifically for independent hotels.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <HowItWorks />
+  
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl" data-i18n="howItWorks.technical.title">
+          Key Technical Features
+        </h2>
+        <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600" data-i18n="howItWorks.technical.subtitle">
+          Built with security, flexibility, and ease of use at its core.
+        </p>
+      </div>
+      
+      <div class="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2">
+        {features.map(feature => (
+          <div class="flex">
+            <div class="flex-shrink-0">
+              <div class="flex items-center justify-center h-12 w-12 rounded-md bg-primary-700 text-white">
+                <Fragment set:html={feature.icon} />
+              </div>
+            </div>
+            <div class="ml-4">
+              <h3 class="text-lg font-medium text-gray-900" data-i18n={feature.i18nKey}>{feature.title}</h3>
+              <p class="mt-2 text-base text-gray-600" data-i18n={feature.i18nDescKey}>{feature.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl" data-i18n="howItWorks.interface.title">
+          Guest Interface Sections
+        </h2>
+        <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600" data-i18n="howItWorks.interface.subtitle">
+          A seamless mobile experience with all the features guests need.
+        </p>
+      </div>
+      
+      <div class="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {sections.map(section => (
+          <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-primary-100 text-primary-700 mx-auto">
+              <Fragment set:html={section.icon} />
+            </div>
+            <h3 class="mt-4 text-lg font-medium text-gray-900 text-center" data-i18n={section.i18nKey}>{section.title}</h3>
+            <p class="mt-2 text-base text-gray-600 text-center" data-i18n={section.i18nDescKey}>{section.description}</p>
+          </div>
+        ))}
+      </div>
+      
+      <div class="mt-16 text-center">
+        <Button href="/contact" variant="primary" size="lg">
+          <span data-i18n="howItWorks.cta">Schedule a Demo</span>
+        </Button>
+      </div>
+    </div>
+  </section>
+</Layout>

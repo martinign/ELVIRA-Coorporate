@@ -1,0 +1,928 @@
+{"siteTitle": "ELVIRA - Plataforma de Concierge Digital para Hotéis",
+"nav": {
+  "solutions": "Soluções",
+  "howItWorks": "Como Funciona",
+  "forHotels": "Para Hotéis",
+  "resources": "Recursos",
+  "about": "Sobre",
+  "login": "Entrar",
+  "demo": "Solicitar uma Demonstração"
+},
+"home": {
+  "announcement": "Eleve as experiências dos hóspedes com nossa solução de concierge digital",
+  "hero": {
+    "title": "Plataforma para Hotéis",
+    "subtitle": "Aumente a eficiência, eficácia e experiência dos hóspedes em hotéis por meio de nossa plataforma digital personalizável. Uma solução completa para hotéis independentes e cadeias boutique.",
+    "cta": {
+      "demo": "Solicitar uma Demonstração",
+      "learn": "Saiba Como Funciona"
+    }, 
+    "image": {
+      "alt": "Hóspede de hotel usando uma plataforma de concierge digital em um tablet"
+    },
+    "video": {
+      "label": "Assista ao nosso vídeo"
+    }
+  },
+  "features": {
+    "title": "Funcionalidades Abrangentes para Experiências dos Hóspedes Aprimoradas",
+    "subtitle": "Tudo o que os hotéis precisam para oferecer um serviço excepcional sem uma infraestrutura de IT extensa."
+  }
+},
+"features": {
+  "verification": {
+    "title": "Verificação de Hóspedes",
+    "description": "Gerenciamento seguro e privado de sessões com códigos únicos de 6 dígitos. Nenhuma coleta de dados pessoais necessária."
+  },
+  "chat": {
+    "title": "Chat Multilíngue",
+    "description": "Tradução em tempo real permite que hóspedes e funcionários se comuniquem facilmente, independentemente de barreiras linguísticas."
+  },
+  "interface": {
+    "title": "Interface Personalizável",
+    "description": "Os hotéis controlam quais seções e serviços aparecem na plataforma, criando uma experiência personalizada para os hóspedes."
+  },
+  "dining": {
+    "title": "Serviço de Quarto e Restaurante",
+    "description": "Os hóspedes podem pedir serviço de quarto ou reservar mesas nos restaurantes do hotel diretamente pela plataforma."
+  },
+  "shop": {
+    "title": "Loja do Hotel",
+    "description": "Navegue e compre produtos disponíveis no hotel, desde souvenirs até artigos de higiene."
+  },
+  "activities": {
+    "title": "Passeios e Atividades",
+    "description": "Reserve passeios e atividades oferecidos pelo hotel, transformando cada estadia em uma aventura."
+  },
+  "staffApp": {
+    "title": "Aplicativo Móvel para Funcionários",
+    "description": "Aplicativo móvel dedicado para funcionários do hotel se comunicarem, gerenciarem tarefas, lidarem com solicitações de hóspedes e acompanharem cronogramas de férias."
+  }
+},
+"howItWorks": {
+  "title": "Como o ELVIRA Funciona",
+  "subtitle": "Uma solução completa de concierge digital projetada especificamente para hotéis independentes.",
+  "steps": {
+    "step1": {
+      "title": "Criação da Sessão do Hóspede",
+      "description": "A recepção gera um código de verificação único de 6 dígitos vinculado ao quarto, sem necessidade de coleta de dados pessoais."
+    },
+    "step2": {
+      "title": "Acesso à Plataforma",
+      "description": "Os hóspedes escaneiam um código QR no quarto, conectam-se ao Wi-Fi e são redirecionados para o prompt de login."
+    },
+    "step3": {
+      "title": "Personalização da Experiência",
+      "description": "Os hóspedes acessam serviços como serviço de quarto, loja do hotel, passeios e chat ao vivo multilíngue com a recepção."
+    },
+    "step4": {
+      "title": "Gerenciamento de Conteúdo do Hotel",
+      "description": "Os hotéis personalizam totalmente os serviços que aparecem na plataforma, com sistemas de aprovação para atividades externas."
+    }
+  },
+  "technical": {
+    "title": "Funcionalidades Técnicas Principais",
+    "subtitle": "Desenvolvido com segurança, flexibilidade e facilidade de uso como prioridades."
+  },
+  "features": {
+    "verification": {
+      "title": "Gerenciamento de Sessões de Hóspedes",
+      "description": "Autenticação segura e privada com códigos únicos que expiram após o check-out."
+    },
+    "multilingual": {
+      "title": "Suporte Multilíngue",
+      "description": "Tradução automática integrada para comunicação entre hóspedes e hotéis em vários idiomas."
+    },
+    "cms": {
+      "title": "Sistema de Gerenciamento de Conteúdo",
+      "description": "Painel simples para que os hotéis gerenciem serviços, anúncios e ofertas."
+    },
+    "chat": {
+      "title": "Chat ao Vivo com a Recepção",
+      "description": "Comunicação em tempo real entre hóspedes e funcionários do hotel por meio da plataforma."
+    }
+  },
+  "interface": {
+    "title": "Seções da Interface do Hóspede",
+    "subtitle": "Uma experiência móvel fluida com todos os recursos que os hóspedes precisam.",
+    "amenities": {
+      "title": "Serviços",
+      "description": "Visualize e solicite serviços disponíveis no hotel diretamente do seu dispositivo."
+    },
+    "dineIn": {
+      "title": "Refeições no Hotel",
+      "description": "Peça serviço de quarto ou reserve uma mesa no restaurante do hotel com facilidade."
+    },
+    "shop": {
+      "title": "Loja do Hotel",
+      "description": "Navegue e compre produtos disponíveis no hotel com entrega no quarto."
+    },
+    "excursions": {
+      "title": "Passeios",
+      "description": "Reserve passeios e atividades oferecidos pelo hotel diretamente do seu dispositivo."
+    },
+    "dineOut": {
+      "title": "Refeições Fora",
+      "description": "Descubra restaurantes externos recomendados e aprovados pelo hotel."
+    },
+    "chat": {
+      "title": "Chat ao Vivo",
+      "description": "Converse com a recepção em tempo real, com tradução automática para vários idiomas."
+    }
+  },
+  "cta": "Agendar uma Demonstração"
+},
+"forHotels": {
+  "title": "Transforme a Experiência dos Seus Hóspedes",
+  "subtitle": "O ELVIRA oferece aos hotéis independentes e boutique as mesmas capacidades de concierge digital que as grandes cadeias, sem a necessidade de recursos extensivos de TI.",
+  "features": [
+    "Sem Investimento em TI Necessário: Uma solução plug-and-play que funciona com sua infraestrutura existente.",
+    "Aumente a Satisfação dos Hóspedes: Ofereça uma experiência digital moderna e conveniente que melhora sua estadia.",
+    "Impulsione a Receita: Aumente as vendas de pedidos no quarto, listagens de passeios e compras na loja do hotel."
+  ],
+  "heroImage": {
+    "alt": "Hóspede de hotel usando um tablet"
+  },
+  "benefits": {
+    "title": "Benefícios para Hotéis Independentes",
+    "subtitle": "Projetado especificamente para hotéis boutique e independentes que desejam oferecer experiências digitais premium sem recursos extensivos de TI."
+  },
+  "benefitsList": {
+    "noIT": {
+      "title": "Sem Necessidade de Recursos de TI",
+      "description": "Um sistema de concierge plug-and-play sem necessidade de desenvolvimento interno ou expertise técnica."
+    },
+    "revenue": {
+      "title": "Receita Aumentada",
+      "description": "Impulsione as vendas de compras no aplicativo, pedidos de serviço de quarto e listagens de passeios com acesso digital fácil."
+    },
+    "satisfaction": {
+      "title": "Satisfação dos Hóspedes Melhorada",
+      "description": "Melhore a experiência dos hóspedes com acesso digital conveniente a todos os serviços e comodidades do hotel."
+    },
+    "customizable": {
+      "title": "Totalmente Personalizável",
+      "description": "Adapte a plataforma para combinar com a identidade do seu hotel e suas ofertas específicas de serviços."
+    },
+    "multilingual": {
+      "title": "Suporte Multilíngue",
+      "description": "Quebre barreiras linguísticas e atenda hóspedes internacionais com capacidades de tradução em tempo real."
+    },
+    "privacy": {
+      "title": "Foco na Privacidade",
+      "description": "Nosso sistema não requer dados pessoais dos hóspedes, mantendo a privacidade enquanto oferece um serviço personalizado."
+    }
+  },
+  "cta": "Agendar uma Consulta",
+  "testimonials": {
+    "title": "O que os Hotéis Dizem sobre o ELVIRA",
+    "subtitle": "Veja como o ELVIRA ajudou hotéis independentes a melhorar a experiência dos seus hóspedes.",
+    "items": [
+      {
+        "content": "Implementar o ELVIRA em nosso hotel boutique transformou a experiência dos nossos hóspedes. A plataforma é incrivelmente intuitiva para nossa equipe e hóspedes, e vimos um aumento significativo nos pedidos de serviço de quarto e nas reservas de passeios.",
+        "author": "Maria Rodriguez",
+        "role": "Gerente Geral",
+        "hotel": "Hotel Boutique Seaside"
+      },
+      {
+        "content": "Como um hotel independente sem uma grande equipe de TI, o ELVIRA nos forneceu exatamente o que precisávamos - uma solução de concierge digital completa que nossos hóspedes adoram. O suporte multilíngue tem sido especialmente valioso para nossa clientela internacional.",
+        "author": "Pierre Dubois",
+        "role": "Proprietário do Hotel",
+        "hotel": "Château Moderne"
+      },
+      {
+        "content": "As opções de personalização nos permitiram alinhar perfeitamente a plataforma com a identidade da nossa marca. Nossos hóspedes gostam especialmente da experiência fluida e da capacidade de conversar com a recepção em seu idioma nativo.",
+        "author": "Sarah Johnson",
+        "role": "Diretora de Operações",
+        "hotel": "Hotel Urban Retreat"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "subtitle": "Perguntas comuns sobre a implementação do ELVIRA no seu hotel.",
+    "items": [
+      {
+        "question": "Quanto tempo leva para implementar o ELVIRA no nosso hotel?",
+        "answer": "A implementação geralmente leva de 2 a 3 semanas, desde a assinatura até a implantação completa. Nossa equipe cuida da configuração, configuração e treinamento da equipe para garantir uma transição suave."
+      },
+      {
+        "question": "O ELVIRA requer hardware especial ou infraestrutura de TI?",
+        "answer": "Não, o ELVIRA é uma solução baseada em nuvem que funciona com sua infraestrutura existente. Tudo o que seu hotel precisa é de Wi-Fi confiável e computadores padrão para o painel de gerenciamento."
+      },
+      {
+        "question": "O ELVIRA pode se integrar ao nosso PMS e sistemas de listagem existentes?",
+        "answer": "Sim, o ELVIRA é projetado para se integrar a sistemas de gerenciamento de propriedades (PMS) e motores de listagem populares. Nossa equipe trabalhará com você para garantir uma integração suave com seus sistemas existentes."
+      },
+      {
+        "question": "Como os hóspedes acessam a plataforma?",
+        "answer": "Os hóspedes simplesmente escaneiam um código QR no quarto, que os conecta ao Wi-Fi do hotel e os redireciona para a página de login. Eles então inserem o número do quarto e um código de verificação único fornecido no check-in."
+      },
+      {
+        "question": "Os dados dos hóspedes são seguros e privados?",
+        "answer": "Absolutamente. O ELVIRA opera em um sistema de sessões baseado em quartos, em vez de coleta de dados pessoais. Cumprimos as regulamentações globais de proteção de dados, incluindo GDPR e CCPA."
+      },
+      {
+        "question": "Podemos personalizar a aparência e as funcionalidades do ELVIRA?",
+        "answer": "Sim, o ELVIRA é totalmente personalizável. Os hotéis podem ajustar a marca, escolher quais funcionalidades exibir e gerenciar o conteúdo por meio de um painel intuitivo."
+      }
+    ]
+  }
+},
+"solutions": {
+  "title": "Nossas Soluções",
+  "subtitle": "Soluções completas de concierge digital projetadas especificamente para hotéis independentes.",
+  "learnMore": "Saiba Mais",
+  "sections": {
+    "guestInterface": {
+      "title": "Interface do Hóspede",
+      "description": "Uma plataforma digital fluida para que os hóspedes acessem todos os serviços do hotel diretamente de seus dispositivos móveis.",
+      "features": {
+        "amenities": "Acesso aos serviços e comodidades do hotel",
+        "dining": "Serviço de quarto e reservas de restaurante",
+        "shop": "Loja do hotel para compras no quarto",
+        "activities": "Passeios e listagens de atividades",
+        "chat": "Chat ao vivo multilíngue com a recepção",
+        "announcements": "Carrossel de anúncios do hotel"
+      }
+    },
+    "management": {
+      "title": "Painel de Gerenciamento do Hotel",
+      "description": "Sistema de gerenciamento de conteúdo simples, mas poderoso, para que os hotéis personalizem e controlem sua plataforma de concierge digital.",
+      "features": {
+        "customizableSections": "Seções de serviços personalizáveis",
+        "contentManagement": "Gerenciamento de conteúdo para cardápios e ofertas",
+        "marketplaceManagement": "Gerenciamento de mercado e passeios",
+        "approvalSystem": "Sistema de aprovação para atividades externas",
+        "announcementManagement": "Gerenciamento de anúncios",
+        "requestTracking": "Acompanhamento de solicitações dos hóspedes"
+      }
+    },
+    "integrations": {
+      "title": "Integrações Perfeitas",
+      "description": "Conecte o ELVIRA aos seus sistemas de gerenciamento de hotel existentes para operações otimizadas.",
+      "features": {
+        "pms": "Integração com Sistemas de Gerenciamento de Propriedades (PMS)",
+        "pos": "Integração com Sistemas de Ponto de Venda (POS)",
+        "payment": "Integração com Gateways de Pagamento",
+        "inventory": "Gerenciamento de Estoque",
+        "restaurant": "Sistemas de Listagem de Restaurantes",
+        "thirdParty": "Provedores de Atividades de Terceiros"
+      }
+    },
+    "multilingual": {
+      "title": "Suporte Multilíngue",
+      "description": "Quebre barreiras linguísticas e atenda hóspedes internacionais com nossas capacidades de tradução em tempo real.",
+      "features": {
+        "liveChat": "Tradução em tempo real no chat ao vivo",
+        "interface": "Interface multilíngue para hóspedes",
+        "languages": "Suporte para os principais idiomas globais",
+        "detection": "Detecção automática de idioma",
+        "adaptation": "Adaptação cultural do conteúdo",
+        "voiceToText": "Capacidades de voz para texto"
+      }
+    }
+  },
+  "pricing": {
+    "title": "Planos de Preços",
+    "subtitle": "Opções de assinatura flexíveis projetadas para hotéis de todos os tamanhos."
+  }
+},
+"pricing": {
+  "title": "Preços Simples e Transparentes",
+  "subtitle": "Planos flexíveis projetados para hotéis de todos os tamanhos, com funcionalidades que crescem com suas necessidades.",
+  "tiers": {
+    "starter": {
+      "name": "Starter",
+      "description": "Perfeito para pequenos hotéis independentes com até 25 quartos.",
+      "price": "$240",
+      "period": "/quarto",
+      "cta": "Começar",
+      "features": [
+        "Interface do hóspede com funcionalidades básicas",
+        "Painel de gerenciamento do hotel",
+        "Tradução em 3 idiomas",
+        "Pedidos de serviço de quarto",
+        "Listagens básicas de passeios",
+        "Suporte por e-mail",
+        "Funcionalidades de segurança padrão"
+      ]
+    },
+    "professional": {
+      "name": "Profissional",
+      "description": "Ideal para hotéis boutique de médio porte com 26-75 quartos.",
+      "price": "$220",
+      "period": "/quarto",
+      "cta": "Começar",
+      "popular": "Mais Popular",
+      "features": [
+        "Todas as funcionalidades do plano Starter",
+        "Tradução em 10 idiomas",
+        "Integração com PMS",
+        "Opções de personalização de marca",
+        "Painel de análise avançado",
+        "Suporte prioritário por e-mail e telefone",
+        "Coleta de feedback dos hóspedes",
+        "Treinamento para a equipe"
+      ]
+    },
+    "enterprise": {
+      "name": "Empresarial",
+      "description": "Personalizado para hotéis maiores e pequenas cadeias com 76+ quartos.",
+      "price": "Personalizado",
+      "period": "",
+      "cta": "Contatar Vendas",
+      "features": [
+        "Todas as funcionalidades do plano Profissional",
+        "Tradução em idiomas ilimitados",
+        "Integrações avançadas",
+        "Opções de desenvolvimento personalizado",
+        "Gerenciamento de múltiplas propriedades",
+        "Gerente de conta dedicado",
+        "Funcionalidades de segurança avançadas",
+        "Suporte premium 24/7"
+      ]
+    }
+  },
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "subtitle": "Tudo o que você precisa saber sobre nossos preços e planos.",
+    "items": [
+      {
+        "question": "Como o preço é determinado?",
+        "answer": "Nosso preço é baseado principalmente no número de quartos do seu hotel. Oferecemos três níveis: Starter para hotéis pequenos (até 25 quartos), Profissional para hotéis médios (26-75 quartos) e Empresarial para hotéis maiores ou pequenas cadeias (76+ quartos)."
+      },
+      {
+        "question": "Há custos adicionais além da taxa mensal?",
+        "answer": "A assinatura mensal cobre todas as funcionalidades padrão dentro do seu nível. Pode haver custos adicionais para trabalhos de desenvolvimento personalizado, integrações especializadas com sistemas de terceiros não incluídos no seu nível ou módulos opcionais adicionais."
+      },
+      {
+        "question": "Vocês oferecem descontos para pagamentos anuais?",
+        "answer": "Sim, oferecemos um desconto de 10% para planos de pagamento anual em todos os níveis. Isso não apenas proporciona economia, mas também garante um serviço ininterrupto para seus hóspedes durante todo o ano."
+      },
+      {
+        "question": "Posso mudar de plano?",
+        "answer": "Sim, você pode mudar de plano a qualquer momento, com a nova taxa entrando em vigor imediatamente. Reduções de plano podem ser processadas no final do seu ciclo de faturamento atual. Nossa equipe ajudará a garantir uma transição suave."
+      },
+      {
+        "question": "Há uma taxa de configuração?",
+        "answer": "Não há taxa de configuração para os planos Starter e Profissional. Planos Empresariais podem incluir uma taxa única de implementação, dependendo da complexidade dos seus requisitos e personalizações necessárias."
+      },
+      {
+        "question": "Vocês oferecem uma avaliação gratuita?",
+        "answer": "Oferecemos uma avaliação de 30 dias para os planos Starter e Profissional. Para clientes Empresariais, fornecemos uma demonstração completa adaptada às suas necessidades específicas antes do compromisso."
+      }
+    ],
+    "contact": "Tem mais perguntas? Entre em contato com nossa equipe em",
+    "email": "vendas@elviradigitalconcierge.com"
+  }
+},
+"contact": {
+  "title": "Entre em Contato",
+  "subtitle": "Interessado em saber mais sobre o ELVIRA? Tem perguntas sobre nossa plataforma de concierge digital? Entre em contato conosco usando o formulário ou através de qualquer um de nossos canais de contato.",
+  "form": {
+    "name": "Nome Completo",
+    "email": "E-mail",
+    "phone": "Telefone",
+    "company": "Hotel / Empresa",
+    "roomCount": "Número de Quartos",
+    "message": "Mensagem",
+    "privacyConsent": "Ao selecionar isso, você concorda com nossa Política de Privacidade.",
+    "submit": "Enviar",
+    "roomOptions": {
+      "select": "Selecione uma opção",
+      "small": "1-25 quartos",
+      "medium": "26-75 quartos",
+      "large": "76+ quartos"
+    }
+  },
+  "connect": "Conecte-se conosco",
+  "contactInfo": {
+    "email": "info@elviradigitalconcierge.com",
+    "emailResponse": "Responderemos em 24 horas",
+    "phone": "+1 (555) 123-4567",
+    "phoneHours": "Seg-Sex 9h-17h EST",
+    "address": {
+      "line1": "123 Rua da Inovação",
+      "line2": "Miami, FL 33101"
+    }
+  }
+},
+"resources": {
+  "title": "Recursos",
+  "subtitle": "Descubra insights, guias e histórias de sucesso para ajudá-lo a aproveitar ao máximo sua plataforma de concierge digital.",
+  "categories": {
+    "blog": "Blog",
+    "caseStudies": "Estudos de Caso",
+    "documentation": "Documentação",
+    "videos": "Vídeos e Webinars"
+  },
+  "viewAll": "Ver Tudo",
+  "actions": {
+    "readArticle": "Ler Artigo",
+    "viewCaseStudy": "Ver Estudo de Caso",
+    "accessDocument": "Acessar Documento",
+    "watchVideo": "Assistir Vídeo"
+  },
+  "blog": {
+    "future": {
+      "title": "O Futuro dos Serviços de Concierge Digital",
+      "description": "Explore como a IA e a tecnologia móvel estão transformando as experiências dos hóspedes em hotéis.",
+      "date": "15 de maio de 2025"
+    },
+    "compete": {
+      "title": "Como Hotéis Independentes Podem Competir com Grandes Cadeias",
+      "description": "Estratégias digitais para hotéis boutique oferecerem experiências premium aos hóspedes.",
+      "date": "22 de abril de 2025"
+    },
+    "multilingual": {
+      "title": "Suporte Multilíngue: Quebrando Barreiras Linguísticas na Hospitalidade",
+      "description": "Melhores práticas para atender hóspedes internacionais por meio de plataformas digitais.",
+      "date": "10 de março de 2025"
+    }
+  },
+  "caseStudies": {
+    "boutique": {
+      "title": "Hotel Boutique Aumenta Receita em 23%",
+      "description": "Como o The Seaside Retreat aproveitou os serviços de concierge digital para aumentar os gastos dos hóspedes.",
+      "location": "Miami, Flórida"
+    },
+    "mountain": {
+      "title": "Otimização de Operações em Mountain Lodge",
+      "description": "A eficiência da equipe melhorou em 35% após a implementação da plataforma ELVIRA.",
+      "location": "Aspen, Colorado"
+    }
+  },
+  "documentation": {
+    "implementation": {
+      "title": "Guia de Implementação",
+      "description": "Processo passo a passo para configurar o ELVIRA no seu hotel.",
+      "type": "Guia Técnico"
+    },
+    "api": {
+      "title": "Referência da API",
+      "description": "Documentação completa sobre as capacidades de integração do ELVIRA.",
+      "type": "Recurso para Desenvolvedores"
+    },
+    "userManual": {
+      "title": "Manual do Usuário",
+      "description": "Guia completo para a equipe do hotel operar a plataforma.",
+      "type": "Guia do Usuário"
+    }
+  },
+  "videos": {
+    "walkthrough": {
+      "title": "Tour pela Plataforma",
+      "description": "Um tour completo pelas interfaces do hóspede e de gerenciamento do hotel do ELVIRA.",
+      "duration": "32 minutos"
+    },
+    "revenue": {
+      "title": "Maximizando a Receita com Concierge Digital",
+      "description": "Webinar com especialistas do setor sobre como aproveitar a tecnologia para a rentabilidade dos hotéis.",
+      "duration": "48 minutos"
+    }
+  }
+},
+"support": {
+  "title": "Como Podemos Ajudar?",
+  "subtitle": "Encontre respostas, acesse recursos e obtenha suporte para sua plataforma de concierge digital ELVIRA.",
+  "searchPlaceholder": "Pesquisar artigos de ajuda...",
+  "categories": {
+    "gettingStarted": {
+      "title": "Começando",
+      "links": {
+        "overview": "Visão Geral da Plataforma",
+        "implementation": "Guia de Implementação",
+        "training": "Recursos de Treinamento para a Equipe",
+        "quickStart": "Guia de Início Rápido"
+      }
+    },
+    "dashboard": {
+      "title": "Painel do Hotel",
+      "links": {
+        "features": "Funcionalidades do Painel",
+        "contentManagement": "Gerenciamento de Conteúdo",
+        "guestCommunication": "Comunicação com Hóspedes",
+        "analytics": "Análises e Relatórios"
+      }
+    },
+    "guestExperience": {
+      "title": "Experiência do Hóspede",
+      "links": {
+        "verification": "Sistema de Verificação de Hóspedes",
+        "multilingual": "Suporte Multilíngue",
+        "diningService": "Serviço de Quarto e Restaurante",
+        "activities": "Passeios e Atividades"
+      }
+    },
+    "integrations": {
+      "title": "Integrações",
+      "links": {
+        "pms": "Integração com PMS",
+        "payment": "Processamento de Pagamentos",
+        "thirdParty": "Serviços de Terceiros",
+        "api": "Documentação da API"
+      }
+    },
+    "troubleshooting": {
+      "title": "Solução de Problemas",
+      "links": {
+        "common": "Problemas Comuns",
+        "errors": "Mensagens de Erro",
+        "connectivity": "Conectividade de Rede",
+        "requirements": "Requisitos do Sistema"
+      }
+    },
+    "billing": {
+      "title": "Cobrança e Conta",
+      "links": {
+        "subscription": "Gerenciamento de Assinatura",
+        "payment": "Métodos de Pagamento",
+        "invoices": "Faturas e Recibos",
+        "account": "Configurações da Conta"
+      }
+    }
+  },
+  "contactSupport": {
+    "title": "Contatar Suporte",
+    "subtitle": "Não encontrou o que procura? Nossa equipe de suporte está pronta para ajudar.",
+    "email": "suporte@elviradigitalconcierge.com",
+    "emailResponse": "Responderemos em 24 horas",
+    "phone": "+1 (555) 123-4567",
+    "phoneHours": "Seg-Sex 9h-17h EST",
+    "submitTicket": "Enviar um Ticket"
+  },
+  "supportPlans": {
+    "title": "Planos de Suporte",
+    "subtitle": "Oferecemos diferentes níveis de suporte com base no seu plano de assinatura.",
+    "standard": {
+      "title": "Suporte Padrão",
+      "description": "Incluído em todos os planos. Suporte por e-mail com tempo de resposta de 24 horas, acesso à base de conhecimento e documentação."
+    },
+    "premium": {
+      "title": "Suporte Premium",
+      "description": "Incluído nos planos Profissionais. Suporte prioritário por e-mail e telefone com tempo de resposta de 8 horas, representante de suporte dedicado."
+    },
+    "enterprise": {
+      "title": "Suporte Empresarial",
+      "description": "Incluído nos planos Empresariais. Suporte prioritário 24/7, tempo de resposta de 4 horas para problemas críticos, gerente de conta dedicado e integração personalizada."
+    }
+  }
+},
+"about": {
+  "title": "Sobre o ELVIRA",
+  "subtitle": "Preenchendo a lacuna tecnológica entre cadeias hoteleiras de luxo e estabelecimentos independentes.",
+  "mission": {
+    "title": "Nossa Missão",
+    "description": "Fornecer uma solução de concierge digital acessível, flexível e de alta qualidade que melhore a satisfação dos hóspedes enquanto ajuda hotéis independentes a modernizar suas ofertas de serviços."
+  },
+  "vision": {
+    "title": "Nossa Visão",
+    "description": "Tornar-nos a plataforma preferida de concierge como serviço para hotéis independentes em todo o mundo, preenchendo a lacuna tecnológica entre cadeias hoteleiras de luxo e estabelecimentos menores."
+  },
+  "values": {
+    "innovation": {
+      "title": "Inovação",
+      "description": "Trazendo tecnologia avançada para a hospitalidade tradicional, evoluindo constantemente para atender às necessidades de hotéis e hóspedes modernos."
+    },
+    "customization": {
+      "title": "Personalização",
+      "description": "Garantindo que os hotéis mantenham o controle total sobre a experiência do hóspede, com soluções flexíveis que se adaptam à identidade única de cada propriedade."
+    },
+    "privacy": {
+      "title": "Privacidade e Segurança",
+      "description": "Priorizando a segurança dos dados por meio de identificação baseada em sessões, em vez de coleta de dados pessoais."
+    },
+    "efficiency": {
+      "title": "Eficiência",
+      "description": "Otimizando os serviços para hóspedes e melhorando a conveniência para os hóspedes, maximizando a eficácia operacional."
+    }
+  },
+  "team": {
+    "title": "Nossa Equipe",
+    "members": {
+      "ceo": {
+        "name": "Jane Cooper",
+        "role": "CEO e Fundadora"
+      },
+      "cto": {
+        "name": "Michael Foster",
+        "role": "CTO"
+      },
+      "product": {
+        "name": "Dries Vincent",
+        "role": "Chefe de Produto"
+      },
+      "marketing": {
+        "name": "Lindsay Walton",
+        "role": "Chefe de Marketing"
+      }
+    },
+    "cta": "Entre em Contato"
+  }
+},
+"footer": {
+  "tagline": "Melhorando as experiências dos hóspedes em hotéis por meio de nossa inovadora plataforma de concierge digital.",
+  "company": {
+    "about": "Sobre",
+    "careers": "Carreiras",
+    "news": "Notícias",
+    "contact": "Contato"
+  },
+  "solutions": {
+    "interface": "Interface do Hóspede",
+    "management": "Gerenciamento do Hotel",
+    "integrations": "Integrações",
+    "multilingual": "Suporte Multilíngue"
+  },
+  "resources": {
+    "blog": "Blog",
+    "documentation": "Documentação",
+    "support": "Suporte",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Serviço"
+  },
+  "copyright": "© 2025 ELVIRA. Todos os direitos reservados."
+},
+"privacy": {
+  "title": "Política de Privacidade",
+  "lastUpdated": "Última Atualização: 1 de junho de 2025",
+  "sections": {
+    "introduction": "1. Introdução",
+    "collection": "2. Informações que Coletamos",
+    "usage": "3. Como Usamos as Informações",
+    "sharing": "4. Compartilhamento e Divulgação de Dados",
+    "security": "5. Segurança dos Dados",
+    "transfers": "6. Transferências Internacionais",
+    "retention": "7. Retenção de Dados",
+    "rights": "8. Seus Direitos",
+    "children": "9. Privacidade das Crianças",
+    "changes": "10. Alterações nesta Política de Privacidade",
+    "contact": "11. Contate-nos"
+  },
+  "faq": {
+    "dataProtection": {
+      "question": "Como meus dados são protegidos?",
+      "answer": "Usamos criptografia e medidas de segurança padrão do setor para proteger seus dados."
+    },
+    "dataCollection": {
+      "question": "Quais dados vocês coletam?",
+      "answer": "Coletamos apenas dados essenciais necessários para fornecer nossos serviços."
+    }
+  },
+  "introduction": {
+    "p1": "ELVIRA (\"nós\", \"nosso\" ou \"nos\") está comprometido em proteger sua privacidade. Esta Política de Privacidade explica como coletamos, usamos, divulgamos e protegemos suas informações quando você usa nossa plataforma de concierge digital, site e serviços.",
+    "p2": "Levamos a privacidade de dados muito a sério, especialmente na indústria hoteleira, onde a confiança é primordial. Nossa plataforma é construída em torno do princípio de minimizar a coleta de dados pessoais enquanto maximiza a qualidade do serviço."
+  },
+  "collection": {
+    "hotelPartner": {
+      "title": "2.1 Informações de Parceiros Hoteleiros",
+      "intro": "Para hotéis que usam nossa plataforma, coletamos:",
+      "item1": "Informações de contato comercial (nomes, endereços de e-mail, números de telefone)",
+      "item2": "Detalhes do hotel (endereço, número de quartos, serviços oferecidos)",
+      "item3": "Informações de pagamento para fins de faturamento",
+      "item4": "Credenciais de login para o painel de gerenciamento"
+    },
+    "guest": {
+      "title": "2.2 Informações de Usuários Finais (Hóspedes)",
+      "intro": "Nossa plataforma é projetada com a privacidade em mente. Para hóspedes de hotéis que usam nosso serviço, coletamos informações mínimas:",
+      "item1": "Número do quarto (associado temporariamente à sessão)",
+      "item2": "Código de verificação da sessão",
+      "item3": "Solicitações e preferências de serviços durante a estadia",
+      "item4": "Comunicações de chat com a equipe do hotel",
+      "note": "Importante, não coletamos informações de identificação pessoal dos hóspedes. O sistema opera em sessões anônimas baseadas em quartos que expiram após o check-out."
+    },
+    "automatic": {
+      "title": "2.3 Informações Coletadas Automaticamente",
+      "intro": "Quando você acessa nossa plataforma, podemos coletar automaticamente:",
+      "item1": "Informações do dispositivo (tipo, sistema operacional, navegador)",
+      "item2": "Dados de uso e padrões",
+      "item3": "Endereço IP e localização aproximada",
+      "item4": "Cookies e tecnologias semelhantes (consulte nossa Política de Cookies)"
+    }
+  },
+  "usage": {
+    "intro": "Usamos as informações coletadas para:",
+    "item1": "Fornecer, manter e melhorar nossos serviços",
+    "item2": "Processar transações e atender solicitações de serviços",
+    "item3": "Comunicar-nos com parceiros hoteleiros sobre suas contas",
+    "item4": "Responder a consultas e fornecer suporte",
+    "item5": "Monitorar e analisar padrões e tendências de uso",
+    "item6": "Proteger contra acesso não autorizado e garantir a segurança da plataforma",
+    "item7": "Cumprir obrigações legais"
+  },
+  "sharing": {
+    "intro": "Podemos compartilhar informações nas seguintes circunstâncias:",
+    "item1": "Parceiros Hoteleiros: Solicitações de serviços e comunicações dos hóspedes são compartilhadas com a equipe relevante do hotel para atender às solicitações.",
+    "item2": "Prestadores de Serviços: Envolvemos terceiros confiáveis para nos ajudar a operar nosso negócio (por exemplo, hospedagem, análise, processamento de pagamentos).",
+    "item3": "Requisitos Legais: Podemos divulgar informações se exigido por lei, regulamentação ou processo legal.",
+    "item4": "Transferências de Negócios: Se o ELVIRA estiver envolvido em uma fusão, aquisição ou venda de ativos, suas informações podem ser transferidas como parte dessa transação.",
+    "note": "Não vendemos ou alugamos dados de usuários a terceiros para fins de marketing."
+  },
+  "security": {
+    "p1": "Implementamos medidas técnicas e organizacionais apropriadas para proteger suas informações de acesso não autorizado, alteração, divulgação ou destruição. No entanto, nenhuma transmissão ou armazenamento eletrônico é 100% seguro, portanto, não podemos garantir segurança absoluta."
+  },
+  "transfers": {
+    "p1": "Nossos serviços podem ser hospedados e processados em vários países, inclusive fora do seu país de residência. Ao usar nossos serviços, você concorda com a transferência de suas informações para países que podem ter regras de proteção de dados diferentes do seu país."
+  },
+  "retention": {
+    "p1": "Retemos as informações de parceiros hoteleiros pelo tempo necessário para fornecer nossos serviços e cumprir os propósitos descritos nesta Política de Privacidade. Os dados de sessão dos hóspedes são excluídos automaticamente após o check-out, mais um breve período de retenção para fins de qualidade do serviço e segurança."
+  },
+  "rights": {
+    "intro": "Dependendo da sua localização, você pode ter direitos sobre suas informações, incluindo:",
+    "item1": "Acessar, corrigir ou excluir suas informações",
+    "item2": "Opor-se a certas atividades de processamento",
+    "item3": "Solicitar a restrição do processamento",
+    "item4": "Portabilidade de dados",
+    "item5": "Retirar o consentimento",
+    "contact": "Para exercer esses direitos, entre em contato conosco usando as informações fornecidas no final desta política."
+  },
+  "children": {
+    "p1": "Nossos serviços não são destinados a crianças menores de 16 anos. Não coletamos informações pessoais de crianças menores de 16 anos. Se você é um pai ou responsável e acredita que seu filho nos forneceu informações pessoais, entre em contato conosco."
+  },
+  "changes": {
+    "p1": "Podemos atualizar esta Política de Privacidade periodicamente para refletir mudanças em nossas práticas ou por outras razões operacionais, legais ou regulatórias. A versão atualizada será indicada por uma data de \"Última Atualização\" atualizada. Recomendamos que você revise esta Política de Privacidade com frequência."
+  },
+  "contact": {
+    "intro": "Se você tiver dúvidas ou preocupações sobre esta Política de Privacidade ou nossas práticas de privacidade, entre em contato conosco em:",
+    "company": "ELVIRA",
+    "address1": "123 Rua da Inovação",
+    "address2": "Miami, FL 33101",
+    "email": "E-mail: privacidade@elviradigitalconcierge.com",
+    "phone": "Telefone: +1 (555) 123-4567"
+  }
+},
+"terms": {
+  "title": "Termos de Serviço",
+  "lastUpdated": "Última Atualização: 1 de junho de 2025",
+  "sections": {
+    "agreement": "1. Aceitação dos Termos",
+    "description": "2. Descrição do Serviço",
+    "account": "3. Registro e Segurança da Conta",
+    "subscription": "4. Termos de Assinatura e Pagamento",
+    "termination": "5. Duração e Rescisão",
+    "responsibilities": "6. Responsabilidades do Usuário e Atividades Proibidas",
+    "ip": "7. Direitos de Propriedade Intelectual",
+    "thirdParty": "8. Serviços e Conteúdo de Terceiros",
+    "disclaimers": "9. Isenções de Responsabilidade",
+    "liability": "10. Limitação de Responsabilidade",
+    "indemnification": "11. Indenização",
+    "changes": "12. Alterações nos Termos",
+    "governing": "13. Lei Aplicável e Resolução de Disputas",
+    "severability": "14. Divisibilidade",
+    "entire": "15. Acordo Completo",
+    "contact": "16. Contate-nos",
+    "faq": "Perguntas Frequentes"
+  },
+  "faq": {
+    "termsOfUse": {
+      "question": "Quais são os termos de uso?",
+      "answer": "Nossos termos descrevem as regras e diretrizes para usar nossa plataforma."
+    },
+    "cancellation": {
+      "question": "Posso cancelar minha assinatura?",
+      "answer": "Sim, você pode cancelar sua assinatura a qualquer momento."
+    }
+  },
+  "agreement": {
+    "p1": "Ao acessar ou usar a plataforma de concierge digital, site e serviços do ELVIRA (coletivamente, os \"Serviços\"), você concorda em estar vinculado a estes Termos de Serviço. Se você não concordar com estes termos, por favor, não use nossos Serviços.",
+    "p2": "Estes Termos constituem um acordo legalmente vinculativo entre você e o ELVIRA (\"nós\", \"nosso\" ou \"nos\") com relação ao seu uso de nossos Serviços."
+  },
+  "description": {
+    "p1": "O ELVIRA fornece uma plataforma de concierge digital projetada para hotéis melhorarem as experiências dos hóspedes. Nossa plataforma permite que os hotéis ofereçam serviços digitais aos seus hóspedes, incluindo pedidos de serviço de quarto, listagens de atividades, informações do hotel e chat ao vivo com a equipe do hotel.",
+    "p2": "Os Serviços estão disponíveis para dois tipos de usuários:",
+    "users": {
+      "hotels": "Parceiros Hoteleiros: Hotéis que assinam nossa plataforma para oferecer serviços de concierge digital aos seus hóspedes.",
+      "guests": "Usuários Finais (Hóspedes): Hóspedes de hotéis que acessam a plataforma durante sua estadia."
+    }
+  },
+  "account": {
+    "hotelPartners": {
+      "title": "3.1 Contas de Parceiros Hoteleiros",
+      "p1": "Para usar nossos Serviços como Parceiro Hoteleiro, você deve criar uma conta. Você concorda em fornecer informações precisas, atuais e completas durante o processo de registro e atualizar tais informações para mantê-las precisas, atuais e completas.",
+      "p2": "Você é responsável por proteger suas credenciais de conta e por todas as atividades que ocorram em sua conta. Você concorda em nos notificar imediatamente sobre qualquer uso não autorizado de sua conta."
+    },
+    "guestAccess": {
+      "title": "3.2 Acesso de Hóspedes",
+      "p1": "Os hóspedes de hotéis acessam a plataforma usando um código de verificação temporário fornecido pelo hotel. Este código está vinculado ao seu quarto e expira após o check-out. Os hóspedes são responsáveis por manter seu código de verificação seguro durante sua estadia."
+    }
+  },
+  "subscription": {
+    "plans": {
+      "title": "4.1 Planos de Assinatura",
+      "p1": "Parceiros Hoteleiros podem escolher entre vários planos de assinatura com base no tamanho do hotel e nos requisitos de funcionalidades. As informações de preços estão disponíveis em nosso site ou por consulta direta com nossa equipe de vendas."
+    },
+    "payment": {
+      "title": "4.2 Pagamento",
+      "p1": "Parceiros Hoteleiros concordam em pagar todas as taxas associadas ao seu plano de assinatura escolhido. Os pagamentos são devidos antecipadamente, mensal ou anualmente, dependendo do ciclo de faturamento selecionado.",
+      "p2": "Usamos processadores de pagamento de terceiros confiáveis. Ao fornecer informações de pagamento, você nos autoriza a cobrar seu método de pagamento designado por todas as taxas incorridas."
+    },
+    "taxes": {
+      "title": "4.3 Impostos",
+      "p1": "Todas as taxas são exclusivas de impostos aplicáveis. Parceiros Hoteleiros são responsáveis por pagar todos os impostos associados ao uso de nossos Serviços."
+    },
+    "refunds": {
+      "title": "4.4 Reembolsos",
+      "p1": "Nossa política de reembolsos está descrita em seu acordo de assinatura. Geralmente, as taxas de assinatura não são reembolsáveis, exceto conforme exigido por lei ou conforme especificado nestes Termos."
+    }
+  },
+  "termination": {
+    "term": {
+      "title": "5.1 Duração",
+      "p1": "Estes Termos permanecerão em vigor até serem rescindidos por você ou por nós."
+    },
+    "byHotels": {
+      "title": "5.2 Rescisão por Parceiros Hoteleiros",
+      "p1": "Parceiros Hoteleiros podem rescindir sua assinatura a qualquer momento, fornecendo aviso por escrito. A rescisão será efetiva no final do ciclo de faturamento atual."
+    },
+    "byComcierge": {
+      "title": "5.3 Rescisão pelo ELVIRA",
+      "p1": "Podemos rescindir ou suspender seu acesso aos Serviços imediatamente, sem aviso prévio ou responsabilidade, por qualquer motivo, incluindo se você violar estes Termos."
+    },
+    "effect": {
+      "title": "5.4 Efeito da Rescisão",
+      "p1": "Após a rescisão, seu direito de usar os Serviços cessará imediatamente. Todas as disposições dos Termos que devam sobreviver à rescisão sobreviverão, incluindo disposições de propriedade, isenções de garantias, indenização e limitações de responsabilidade."
+    }
+  },
+  "responsibilities": {
+    "intro": "Ao usar nossos Serviços, você concorda em não:",
+    "item1": "Violar qualquer lei ou regulamentação aplicável",
+    "item2": "Infringir os direitos de outros",
+    "item3": "Usar os Serviços para qualquer finalidade ilegal ou não autorizada",
+    "item4": "Interferir ou interromper os Serviços ou servidores",
+    "item5": "Tentar acessar não autorizadamente os Serviços",
+    "item6": "Transmitir qualquer vírus, malware ou outro código prejudicial",
+    "item7": "Coletar ou colher dados de usuários sem permissão",
+    "item8": "Se passar por outra pessoa ou entidade",
+    "item9": "Publicar conteúdo difamatório, obsceno ou de outra forma inapropriado"
+  },
+  "ip": {
+    "ownership": {
+      "title": "7.1 Nossa Propriedade Intelectual",
+      "p1": "Os Serviços, incluindo todo o conteúdo, funcionalidades e recursos, são propriedade do ELVIRA ou de nossos licenciadores e são protegidos por leis de direitos autorais, marcas registradas e outras leis de propriedade intelectual."
+    },
+    "license": {
+      "title": "7.2 Licença para Usar",
+      "p1": "Concedemos aos Parceiros Hoteleiros uma licença limitada, não exclusiva, não transferível e revogável para usar nossos Serviços conforme descrito em seu plano de assinatura. Hóspedes de hotéis recebem uma licença limitada para usar a plataforma durante sua estadia."
+    },
+    "feedback": {
+      "title": "7.3 Feedback",
+      "p1": "Se você nos fornecer feedback ou sugestões sobre nossos Serviços, você nos concede o direito de usar esse feedback sem restrição ou compensação."
+    }
+  },
+  "thirdParty": {
+    "p1": "Nossos Serviços podem incluir links para sites ou serviços de terceiros que não são de propriedade ou controlados pelo ELVIRA. Não temos controle sobre e não assumimos responsabilidade pelo conteúdo, políticas de privacidade ou práticas de qualquer site ou serviço de terceiros."
+  },
+  "disclaimers": {
+    "p1": "OS SERVIÇOS SÃO FORNECIDOS \"COMO ESTÃO\" E \"CONFORME DISPONÍVEL\" SEM GARANTIAS DE QUALQUER TIPO, EXPRESSAS OU IMPLÍCITAS, INCLUINDO, MAS NÃO SE LIMITANDO A, GARANTIAS IMPLÍCITAS DE COMERCIALIZAÇÃO, ADEQUAÇÃO A UM PROPÓSITO ESPECÍFICO E NÃO VIOLAÇÃO.",
+    "p2": "Não garantimos que os Serviços sejam ininterruptos, seguros ou livres de erros, que os defeitos sejam corrigidos ou que os Serviços estejam livres de vírus ou outros componentes prejudiciais."
+  },
+  "liability": {
+    "p1": "NA MÁXIMA EXTENSÃO PERMITIDA PELA LEI APLICÁVEL, O ELVIRA NÃO SERÁ RESPONSÁVEL POR DANOS INDIRETOS, INCIDENTAIS, ESPECIAIS, CONSEQUENCIAIS OU PUNITIVOS, OU QUALQUER PERDA DE LUCROS OU RECEITA, INCORRIDOS DIRETA OU INDIRETAMENTE, OU QUALQUER PERDA DE DADOS, USO, BOA VONTADE OU OUTRAS PERDAS INTANGÍVEIS.",
+    "p2": "EM NENHUMA CIRCUNSTÂNCIA A RESPONSABILIDADE AGREGADA DO ELVIRA POR TODAS AS RECLAMAÇÕES RELACIONADAS AOS SERVIÇOS EXCEDERÁ O VALOR PAGO POR UM PARCEIRO HOTELEIRO NOS ÚLTIMOS DOZE MESES."
+  },
+  "indemnification": {
+    "p1": "Você concorda em defender, indenizar e isentar o ELVIRA e nossos diretores, funcionários e agentes de e contra qualquer reclamação, responsabilidade, dano, perda e despesa, incluindo honorários razoáveis de advogados, decorrentes de ou relacionados ao seu acesso ou uso dos Serviços ou sua violação destes Termos."
+  },
+  "changes": {
+    "p1": "Reservamo-nos o direito de modificar estes Termos a qualquer momento. Se fizermos alterações materiais, forneceremos aviso por meio dos Serviços ou por outros meios. Seu uso contínuo dos Serviços após tal aviso constitui sua aceitação dos Termos modificados."
+  },
+  "governing": {
+    "p1": "Estes Termos serão regidos pelas leis do Estado da Flórida, sem considerar seus princípios de conflito de leis. Qualquer disputa decorrente destes Termos será resolvida exclusivamente nos tribunais estaduais ou federais localizados no Condado de Miami-Dade, Flórida."
+  },
+  "severability": {
+    "p1": "Se qualquer disposição destes Termos for considerada inválida ou inexequível, tal disposição será eliminada e as disposições restantes serão aplicadas."
+  },
+  "entire": {
+    "p1": "Estes Termos, juntamente com quaisquer termos e condições adicionais incorporados por referência, constituem o acordo completo entre você e o ELVIRA com relação aos Serviços e substituem todos os acordos e entendimentos anteriores."
+  },
+  "contact": {
+    "intro": "Se você tiver dúvidas sobre estes Termos, entre em contato conosco em:",
+    "company": "ELVIRA",
+    "address1": "Wedekinstrasse 25",
+    "address2": "Berlim, Alemanha",
+    "email": "E-mail: info@elviradc.com",
+    "phone": "Telefone: +1 (555) 123-4567"
+  }
+},
+"cta": {
+  "title": "Pronto para transformar a experiência dos seus hóspedes?",
+  "subtitle": "Comece a sua jornada com a ELVIRA digital concierge e redefina a experiência do hóspede desde o primeiro dia.",
+  "demo": "Solicitar uma Demonstração",
+  "pricing": "Ver Preços"
+},
+"languageSelector": {
+  "languages": {
+    "en": "Inglês",
+    "es": "Espanhol",
+    "pt": "Português",
+    "fr": "Francês",
+    "de": "Alemão"
+  }
+},
+"social": {
+  "facebook": "Facebook",
+  "twitter": "Twitter",
+  "linkedin": "LinkedIn"
+}
+}

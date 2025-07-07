@@ -1,0 +1,263 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import CTA from '../components/CTA.astro';
+
+const solutions = [
+  {
+    id: 'guest-interface',
+    title: 'Guest Interface',
+    i18nKey: 'solutions.sections.guestInterface.title',
+    description: 'A seamless digital platform for guests to access all hotel services directly from their mobile devices.',
+    i18nDescKey: 'solutions.sections.guestInterface.description',
+    features: [
+      { text: 'Access to hotel amenities and services', i18nKey: 'solutions.sections.guestInterface.features.amenities' },
+      { text: 'Room service and dining reservations', i18nKey: 'solutions.sections.guestInterface.features.dining' },
+      { text: 'Hotel shop for in-room purchases', i18nKey: 'solutions.sections.guestInterface.features.shop' },
+      { text: 'Excursions and activity listing', i18nKey: 'solutions.sections.guestInterface.features.activities' },
+      { text: 'Multilingual live chat with reception', i18nKey: 'solutions.sections.guestInterface.features.chat' },
+      { text: 'Hotel announcements carousel', i18nKey: 'solutions.sections.guestInterface.features.announcements' }
+    ],
+    image: 'https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+  },
+  {
+    id: 'hotel-management',
+    title: 'Hotel Management Dashboard',
+    i18nKey: 'solutions.sections.management.title',
+    description: 'Simple yet powerful content management system for hotels to customize and control their digital concierge platform.',
+    i18nDescKey: 'solutions.sections.management.description',
+    features: [
+      { text: 'Customizable service sections', i18nKey: 'solutions.sections.management.features.customizableSections' },
+      { text: 'Content management for menus and offerings', i18nKey: 'solutions.sections.management.features.contentManagement' },
+      { text: 'Marketplace and excursion management', i18nKey: 'solutions.sections.management.features.marketplaceManagement' },
+      { text: 'External activity approval system', i18nKey: 'solutions.sections.management.features.approvalSystem' },
+      { text: 'Announcement management', i18nKey: 'solutions.sections.management.features.announcementManagement' },
+      { text: 'Guest request tracking', i18nKey: 'solutions.sections.management.features.requestTracking' }
+    ],
+    image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+  },
+
+  {
+    id: 'multilingual',
+    title: '(In progress) Multilingual Support',
+    i18nKey: 'solutions.sections.multilingual.title',
+    description: 'Break language barriers and serve international guests with our real-time translation capabilities.',
+    i18nDescKey: 'solutions.sections.multilingual.description',
+    features: [
+      { text: 'Real-time translation in live chat', i18nKey: 'solutions.sections.multilingual.features.liveChat' },
+      { text: 'Multilingual interface for guests', i18nKey: 'solutions.sections.multilingual.features.interface' },
+      { text: 'Support for major global languages', i18nKey: 'solutions.sections.multilingual.features.languages' },
+      { text: 'Automatic language detection', i18nKey: 'solutions.sections.multilingual.features.detection' },
+      { text: 'Cultural adaptation of content', i18nKey: 'solutions.sections.multilingual.features.adaptation' },
+
+    ],
+    image: 'https://images.unsplash.com/photo-1596524430615-b46475ddff6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+  }
+];
+---
+
+<Layout 
+  title="Comcierge Solutions - Digital Concierge Platform" 
+  description="Explore Comcierge's comprehensive digital concierge solutions for independent hotels, from guest interface to management dashboard."
+>
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl font-extrabold text-gray-900 sm:text-5xl" data-i18n="solutions.title">
+          Our Solutions
+        </h1>
+        <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-600" data-i18n="solutions.subtitle">
+          Comprehensive digital concierge solutions designed specifically for independent hotels.
+        </p>
+      </div>
+      
+      <div class="mt-16 space-y-24">
+        {solutions.map((solution, index) => (
+          <div id={solution.id} class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+            <div class={index % 2 === 1 ? 'lg:order-2' : ''}>
+              <h2 class="text-3xl font-bold text-gray-900" data-i18n={solution.i18nKey}>{solution.title}</h2>
+              <p class="mt-4 text-lg text-gray-600" data-i18n={solution.i18nDescKey}>{solution.description}</p>
+              
+              <ul class="mt-8 space-y-4">
+                {solution.features.map(feature => (
+                  <li class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <svg class="h-6 w-6 text-primary-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <p class="ml-3 text-base text-gray-600" data-i18n={feature.i18nKey}>{feature.text}</p>
+                  </li>
+                ))}
+              </ul>
+              
+              <div class="mt-8">
+                <Button href="/contact" variant="primary">
+                  <span data-i18n="solutions.learnMore">Learn More</span>
+                </Button>
+              </div>
+            </div>
+            <div class={`mt-10 lg:mt-0 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+              <div class="relative mx-auto w-full rounded-lg shadow-lg overflow-hidden">
+                <img src={solution.image} alt={solution.title} class="w-full h-80 object-cover" data-i18n-alt={solution.i18nKey} />
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h2 class="text-3xl font-bold text-gray-900" data-i18n="solutions.pricing.title">Pricing Plans</h2>
+        <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600" data-i18n="solutions.pricing.subtitle">
+          Flexible subscription options designed to fit hotels of all sizes.
+        </p>
+      </div>
+      
+      <div class="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+          <div class="p-6 border-b border-gray-200 bg-gray-50">
+            <h3 class="text-lg font-medium text-gray-900" data-i18n="pricing.tiers.starter.name">Starter</h3>
+            <p class="mt-4 text-3xl font-bold text-gray-900" data-i18n="pricing.tiers.starter.price">$299<span class="text-lg font-medium text-gray-500" data-i18n="pricing.tiers.starter.period">/month</span></p>
+            <p class="mt-1 text-sm text-gray-600" data-i18n="pricing.tiers.starter.description">For small hotels up to 25 rooms</p>
+          </div>
+          <div class="p-6">
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="ml-3 text-base text-gray-600" data-i18n="pricing.tiers.starter.features.0">Guest interface with basic features</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="ml-3 text-base text-gray-600" data-i18n="pricing.tiers.starter.features.1">Hotel management dashboard</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="ml-3 text-base text-gray-600" data-i18n="pricing.tiers.starter.features.2">3 language translations</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="ml-3 text-base text-gray-600" data-i18n="pricing.tiers.starter.features.5">Email support</span>
+              </li>
+            </ul>
+            <div class="mt-8">
+              <Button href="/contact" variant="outline" class="w-full justify-center">
+                <span data-i18n="pricing.tiers.starter.cta">Get Started</span>
+              </Button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-lg border-2 border-primary-500 overflow-hidden">
+          <div class="p-6 border-b border-gray-200 bg-primary-50">
+            <div class="flex justify-between items-center">
+              <h3 class="text-lg font-medium text-gray-900" data-i18n="pricing.tiers.professional.name">Professional</h3>
+              <span class="px-3 py-1 text-xs font-medium rounded-full bg-primary-100 text-primary-800" data-i18n="pricing.tiers.professional.popular">Most Popular</span>
+            </div>
+            <p class="mt-4 text-3xl font-bold text-gray-900" data-i18n="pricing.tiers.professional.price">$599<span class="text-lg font-medium text-gray-500" data-i18n="pricing.tiers.professional.period">/month</span></p>
+            <p class="mt-1 text-sm text-gray-600" data-i18n="pricing.tiers.professional.description">For medium hotels with 26-75 rooms</p>
+          </div>
+          <div class="p-6">
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="ml-3 text-base text-gray-600" data-i18n="pricing.tiers.professional.features.0">All Starter features</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="ml-3 text-base text-gray-600" data-i18n="pricing.tiers.professional.features.1">10 language translations</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="ml-3 text-base text-gray-600" data-i18n="pricing.tiers.professional.features.2">PMS integration</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="ml-3 text-base text-gray-600" data-i18n="pricing.tiers.professional.features.5">Priority email & phone support</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="ml-3 text-base text-gray-600" data-i18n="pricing.tiers.professional.features.3">Custom branding options</span>
+              </li>
+            </ul>
+            <div class="mt-8">
+              <Button href="/contact" variant="primary" class="w-full justify-center">
+                <span data-i18n="pricing.tiers.professional.cta">Get Started</span>
+              </Button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+          <div class="p-6 border-b border-gray-200 bg-gray-50">
+            <h3 class="text-lg font-medium text-gray-900" data-i18n="pricing.tiers.enterprise.name">Enterprise</h3>
+            <p class="mt-4 text-3xl font-bold text-gray-900" data-i18n="pricing.tiers.enterprise.price">Custom<span class="text-lg font-medium text-gray-500" data-i18n="pricing.tiers.enterprise.period"></span></p>
+            <p class="mt-1 text-sm text-gray-600" data-i18n="pricing.tiers.enterprise.description">For large hotels with 76+ rooms</p>
+          </div>
+          <div class="p-6">
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="ml-3 text-base text-gray-600" data-i18n="pricing.tiers.enterprise.features.0">All Professional features</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="ml-3 text-base text-gray-600" data-i18n="pricing.tiers.enterprise.features.1">Unlimited language translations</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="ml-3 text-base text-gray-600" data-i18n="pricing.tiers.enterprise.features.2">Advanced integrations</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="ml-3 text-base text-gray-600" data-i18n="pricing.tiers.enterprise.features.5">Dedicated account manager</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="ml-3 text-base text-gray-600" data-i18n="pricing.tiers.enterprise.features.3">Custom development options</span>
+              </li>
+            </ul>
+            <div class="mt-8">
+              <Button href="/contact" variant="outline" class="w-full justify-center">
+                <span data-i18n="pricing.tiers.enterprise.cta">Contact Sales</span>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <CTA />
+</Layout>

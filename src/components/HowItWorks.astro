@@ -1,0 +1,62 @@
+---
+const steps = [
+  {
+    number: '01',
+    title: 'Guest Session Creation',
+    i18nTitleKey: 'howItWorks.steps.step1.title',
+    description: 'Reception generates a unique 6-digit verification code linked to the room, with no personal data collection required.',
+    i18nDescKey: 'howItWorks.steps.step1.description',
+    image: 'https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
+  },
+  {
+    number: '02',
+    title: 'Accessing the Platform',
+    i18nTitleKey: 'howItWorks.steps.step2.title',
+    description: 'Guests scan a QR code in their room, connecting to Wi-Fi and redirecting to the login prompt.',
+    i18nDescKey: 'howItWorks.steps.step2.description',
+    image: '/src/assets/image copy copy.png'
+  },
+  {
+    number: '03',
+    title: 'Personalizing Experience',
+    i18nTitleKey: 'howItWorks.steps.step3.title',
+    description: 'Guests access services like room service, hotel shop, excursions, and multilingual live chat with reception.',
+    i18nDescKey: 'howItWorks.steps.step3.description',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
+  },
+  {
+    number: '04',
+    title: 'Hotel Content Management',
+    i18nTitleKey: 'howItWorks.steps.step4.title',
+    description: 'Hotels fully customize what services appear on the platform, with approval systems for external activities.',
+    i18nDescKey: 'howItWorks.steps.step4.description',
+    image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
+  }
+];
+---
+
+<section class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="space-y-16">
+      {steps.map((step, index) => (
+        <div class={`flex flex-col lg:flex-row ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''} gap-8 lg:gap-12`}>
+          <div class="lg:w-1/2">
+            <img
+              src={step.image}
+              alt={step.title}
+              class="rounded-xl shadow-xl w-full h-64 md:h-80 object-cover"
+              data-i18n-alt={step.i18nTitleKey}
+            />
+          </div>
+          <div class="lg:w-1/2 flex flex-col justify-center">
+            <div class="flex items-center">
+              <span class="text-4xl font-bold text-primary-200">{step.number}</span>
+              <h3 class="ml-4 text-2xl font-bold text-gray-900" data-i18n={step.i18nTitleKey}>{step.title}</h3>
+            </div>
+            <p class="mt-4 text-lg text-gray-600" data-i18n={step.i18nDescKey}>{step.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
